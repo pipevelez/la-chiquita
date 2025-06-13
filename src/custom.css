@@ -8,7 +8,8 @@ body {
   background-color: #321808 !important;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: #faf7e7 !important;
 }
 
@@ -25,4 +26,18 @@ body {
   background-color: #e9b274;
   border-color: #e9b274;
   color: #321808;
+}
+
+/* ✅ Botón del menú (hamburguesa) blanco */
+.navbar-toggler {
+  border-color: #faf7e7;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250, 247, 231, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ✅ Opcional: Hover del enlace para mejor usabilidad */
+.nav-link:hover {
+  color: #e9b274 !important;
 }
