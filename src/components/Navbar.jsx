@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#321808" }}>
-      <div className="container">
+    <nav className="navbar navbar-expand-lg sticky-top" style={{ backgroundColor: "#321808" }}>
+      <div className="container-fluid px-3 px-md-5">
         <Link
           to="/"
           className="navbar-brand d-flex align-items-center"
-          style={{ color: "#faf7e7", fontSize: "1.8rem", fontWeight: "bold" }}
+          style={{ color: "#faf7e7", fontSize: "1.5rem", fontWeight: "bold" }}
         >
           <img
             src="/icono.jpg"
             alt="Logo La Chiquita"
-            width="80"
-            height="80"
+            width="60"
+            height="60"
             className="me-2 rounded-circle"
           />
-          Panadería La Chiquita
+          La Chiquita
         </Link>
 
         <button
@@ -31,25 +31,25 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav text-center">
             <li className="nav-item">
-              <Link to="/" className="nav-link" style={{ color: "#faf7e7", fontSize: "1.1rem" }}>
+              <Link to="/" className="nav-link text-light fw-semibold fs-5">
                 Inicio
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/productos" className="nav-link" style={{ color: "#faf7e7", fontSize: "1.1rem" }}>
+              <Link to="/productos" className="nav-link text-light fw-semibold fs-5">
                 Productos
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/nosotros" className="nav-link" style={{ color: "#faf7e7", fontSize: "1.1rem" }}>
+              <Link to="/nosotros" className="nav-link text-light fw-semibold fs-5">
                 Nosotros
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contacto" className="nav-link" style={{ color: "#faf7e7", fontSize: "1.1rem" }}>
+              <Link to="/contacto" className="nav-link text-light fw-semibold fs-5">
                 Contacto
               </Link>
             </li>

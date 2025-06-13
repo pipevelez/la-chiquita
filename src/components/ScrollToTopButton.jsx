@@ -1,40 +1,40 @@
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-function ScrollToTopButton() {
+export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 300);
     };
-
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0, // Siempre al pixel 0
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle"
-        style={{ zIndex: 1000, width: "50px", height: "50px" }}
+        className="btn btn-primary position-fixed"
+        style={{
+          bottom: "20px",
+          right: "20px",
+          width: "50px",
+          height: "50px",
+          borderRadius: "50%",
+          zIndex: 1050,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
-        <FaArrowUp />
+        <FaArrowUp size={20} />
       </button>
     )
   );
 }
-
-export default ScrollToTopButton;
