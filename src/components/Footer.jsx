@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-4 mb-3">
             <h5 style={{ color: "#e9b274" }}>La Chiquita</h5>
-            <p>Panadería artesanal desde 1995.</p>
+            <p>Horneando los mejores productos desde 1978.</p>
           </div>
 
           <div className="col-md-4 mb-3">
