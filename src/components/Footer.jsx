@@ -1,3 +1,5 @@
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer
@@ -21,24 +23,31 @@ export default function Footer() {
           <div className="col-md-4 mb-3">
             <h5 style={{ color: "#e9b274" }}>Síguenos</h5>
             <a
-              href="#"
-              className="me-2"
-              style={{ color: "#faf7e7", textDecoration: "none" }}
+              href="https://www.facebook.com/PanaderiayCafeteriaLaChiquita"
+              className="me-3 d-inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#faf7e7", fontSize: "1.5rem" }}
             >
-              Facebook
+              <FaFacebookF />
             </a>
             <a
-              href="#"
-              className="me-2"
-              style={{ color: "#faf7e7", textDecoration: "none" }}
+              href="https://www.instagram.com/la_chiquita_panaderia?igsh=MWVncXlzMTNhdW9vNQ=="
+              className="me-3 d-inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#faf7e7", fontSize: "1.5rem" }}
             >
-              Instagram
+              <FaInstagram />
             </a>
             <a
-              href="#"
-              style={{ color: "#faf7e7", textDecoration: "none" }}
+              href="https://wa.me/573203818931"
+              className="d-inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#faf7e7", fontSize: "1.5rem" }}
             >
-              WhatsApp
+              <FaWhatsapp />
             </a>
           </div>
         </div>
