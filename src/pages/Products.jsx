@@ -17,10 +17,9 @@ const products = {
   ],
   Bebidas: [
     {
-      name: "Café Americano",
-      description: "Aroma suave, sabor intenso.",
-      price: "$4.000",
-      image: "/icono.jpg",
+      name: "Kumis",
+      description: "Fresco, cremoso y 100% artesanal. ¡El sabor de casa en cada sorbo!",
+      image: "/img/kumis.png",
     },
     {
       name: "Chocolate Caliente",
