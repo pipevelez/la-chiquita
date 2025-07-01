@@ -53,17 +53,36 @@ function NavbarCloser() {
   const location = useLocation();
 
   useEffect(() => {
-    const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse && window.bootstrap) {
-      let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-      if (!bsCollapse) {
-        bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
+    const closeMenu = () => {
+      const navbarCollapse = document.getElementById("navbarNav");
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      
+      if (navbarCollapse) {
+        // Cierre compatible con Bootstrap
+        if (window.bootstrap) {
+          const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse) || 
+                            new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
+          if (bsCollapse._isShown()) {
+            bsCollapse.hide();
+          }
+        } 
+        // Fallback manual
+        else if (navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+          if (navbarToggler) {
+            navbarToggler.classList.add('collapsed');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+          }
+        }
       }
-      bsCollapse.hide();
-    }
-  }, [location]); // cierra navbar en cada navegación
+    };
 
-  return null; // este componente no renderiza nada visible
+    // Pequeño retraso para sincronizar con la animación
+    const timer = setTimeout(closeMenu, 10);
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  return null;
 }
 
 function App() {

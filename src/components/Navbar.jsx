@@ -3,12 +3,25 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse && window.bootstrap) {
-      let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-      if (!bsCollapse) {
-        bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    
+    if (navbarCollapse) {
+      // Cierre con Bootstrap
+      if (window.bootstrap) {
+        const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse) || 
+                          new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
+        if (bsCollapse._isShown()) {
+          bsCollapse.hide();
+        }
+      } 
+      // Fallback manual
+      else if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+        if (navbarToggler) {
+          navbarToggler.classList.add('collapsed');
+          navbarToggler.setAttribute('aria-expanded', 'false');
+        }
       }
-      bsCollapse.hide();
     }
   };
 
