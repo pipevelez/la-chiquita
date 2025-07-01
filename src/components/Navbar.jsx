@@ -5,7 +5,6 @@ export default function Navbar() {
     const navbarCollapse = document.getElementById("navbarNav");
     if (navbarCollapse && window.bootstrap) {
       let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-      // Si no existe instancia, la creamos manualmente para asegurarnos
       if (!bsCollapse) {
         bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
       }
@@ -47,38 +46,22 @@ export default function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav text-center">
             <li className="nav-item">
-              <Link
-                to="/"
-                className="nav-link text-light fw-semibold fs-5"
-                onClick={handleNavLinkClick}
-              >
+              <Link to="/" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
                 Inicio
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/productos"
-                className="nav-link text-light fw-semibold fs-5"
-                onClick={handleNavLinkClick}
-              >
+              <Link to="/productos" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
                 Productos
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/nosotros"
-                className="nav-link text-light fw-semibold fs-5"
-                onClick={handleNavLinkClick}
-              >
+              <Link to="/nosotros" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
                 Nosotros
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/contacto"
-                className="nav-link text-light fw-semibold fs-5"
-                onClick={handleNavLinkClick}
-              >
+              <Link to="/contacto" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
                 Contacto
               </Link>
             </li>
