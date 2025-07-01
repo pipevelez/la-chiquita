@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -9,10 +8,10 @@ import Contact from "./pages/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import ScrollRestoration from "./components/ScrollRestoration";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
 
 function AnimatedRoutes() {
   const location = useLocation();
-
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
@@ -50,7 +49,7 @@ function PageTransition({ children }) {
   );
 }
 
-function App() {
+function NavbarCloser() {
   const location = useLocation();
 
   useEffect(() => {
@@ -62,11 +61,16 @@ function App() {
       }
       bsCollapse.hide();
     }
-  }, [location]); // 🔥 cada vez que cambia la ruta, cierra el menú
+  }, [location]); // cierra navbar en cada navegación
 
+  return null; // este componente no renderiza nada visible
+}
+
+function App() {
   return (
     <>
       <ScrollRestoration />
+      <NavbarCloser /> {/* ✅ cierra el menú al navegar */}
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
