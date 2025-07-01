@@ -3,43 +3,43 @@ import ProductCard from "../components/ProductCard";
 const products = {
   Panadería: [
     {
-      name: "Pan Francés",
-      description: "Pan crujiente, perfecto para el desayuno.",
-      price: "$2.000",
-      image: "/icono.jpg",
+      name: "Danesa de frutas",
+      description: "Crujientes y suaves, rellenas de exquisitas frutas confitadas. El toque perfecto de dulzura para acompañar tu café.",
+      image: "/Danesas.png",
     },
-    {
-      name: "Pan Integral",
-      description: "Saludable, elaborado con harinas integrales.",
-      price: "$2.500",
-      image: "/icono.jpg",
-    },
+   
   ],
   Bebidas: [
     {
       name: "Kumis",
       description: "Fresco, cremoso y 100% artesanal. ¡El sabor de casa en cada sorbo!",
-      image: "/img/kumis.png",
+      image: "/Kumis.png",
     },
-    {
-      name: "Chocolate Caliente",
-      description: "Chocolate artesanal con leche cremosa.",
-      price: "$4.500",
-      image: "/icono.jpg",
-    },
+    
   ],
   Dulces: [
     {
-      name: "Galletas Artesanales",
-      description: "Con chispas de chocolate y crocantes.",
-      price: "$2.500",
-      image: "/icono.jpg",
+      name: "Alfajor",
+      description: "Doble galleta suave, rellena de cremoso arequipe y bañada en coco rallado. Un bocado que te hará sonreír.",
+      image: "/Alfajores.png",
     },
     {
-      name: "Brownie",
-      description: "Suave por dentro, crujiente por fuera.",
-      price: "$3.000",
-      image: "/icono.jpg",
+      name: "Milhoja",
+      description: "Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce.",
+      image: "/Milhojas.png",
+    },
+    {
+      name: "Torta de Maracuyá",
+      description: "Suave, esponjosa y con el toque perfecto de maracuyá natural. Una explosión de sabor tropical en cada bocado.",
+      image: "/Torta_mar.png",
+    }
+  ],
+
+  Especialidades: [
+    {
+      name: "Pizza",
+      description: "Masa suave y crujiente, cubierta con salsa casera, queso derretido y jamón. ¡Un pedazo de sabor irresistible que te hará querer más!",
+      image: "/Pizza.png",
     },
   ],
 };
