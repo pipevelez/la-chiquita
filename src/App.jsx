@@ -15,22 +15,10 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={<PageTransition><Home /></PageTransition>}
-        />
-        <Route
-          path="/productos"
-          element={<PageTransition><Products /></PageTransition>}
-        />
-        <Route
-          path="/nosotros"
-          element={<PageTransition><About /></PageTransition>}
-        />
-        <Route
-          path="/contacto"
-          element={<PageTransition><Contact /></PageTransition>}
-        />
+        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+        <Route path="/productos" element={<PageTransition><Products /></PageTransition>} />
+        <Route path="/nosotros" element={<PageTransition><About /></PageTransition>} />
+        <Route path="/contacto" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );
@@ -54,23 +42,28 @@ function NavbarCloser() {
 
   useEffect(() => {
     const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse && window.bootstrap) {
-      let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-      if (!bsCollapse) {
-        bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
-      }
+    if (!navbarCollapse || !window.bootstrap) return;
+
+    // Obtén o crea la instancia de Collapse
+    let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
+    if (!bsCollapse) {
+      bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
+    }
+
+    // Cierra el navbar solo si está visible
+    if (navbarCollapse.classList.contains("show")) {
       bsCollapse.hide();
     }
-  }, [location]); // cierra navbar en cada navegación
+  }, [location]); // cada vez que la ruta cambia
 
-  return null; // este componente no renderiza nada visible
+  return null;
 }
 
 function App() {
   return (
     <>
       <ScrollRestoration />
-      <NavbarCloser /> {/* ✅ cierra el menú al navegar */}
+      <NavbarCloser />
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
