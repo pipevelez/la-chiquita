@@ -69,10 +69,14 @@ export default function Products() {
 
       {/* Categorías */}
       {Object.entries(products).map(([category, items], idx) => (
-        <section key={idx} id={category} className="mb-5">
-          <h2 className="mb-3 category-title" style={{ color: "#321808" }}>
+        <section key={idx} className="mb-5">
+          {/* Punto de anclaje invisible para compensar el navbar */}
+          <div id={category} style={{ position: "relative", top: "-80px" }}></div>
+
+          <h2 className="mb-3" style={{ color: "#321808" }}>
             {category}
           </h2>
+
           <div className="row g-3">
             {items.map((product, index) => (
               <div className="col-6 col-md-3" key={index}>
