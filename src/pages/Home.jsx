@@ -37,22 +37,20 @@ export default function Home() {
       </p>
 
       {/* 📺 Cuadro para el video (placeholder) */}
-      <div
-        className="mx-auto mb-5"
+      <video
+        className="mx-auto mb-5 d-block"
         style={{
           width: "300px",
           height: "200px",
-          backgroundColor: "#e9b274",
           borderRadius: "12px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "#321808",
-          fontWeight: "bold",
+          objectFit: "cover",
         }}
-      >
-        Aquí irá el video 📹
-      </div>
+        src="/Hojaldre.mp4"
+        controls
+        muted
+        autoPlay
+        loop
+      />
 
       <h2 className="mb-3">Recomendados</h2>
 
