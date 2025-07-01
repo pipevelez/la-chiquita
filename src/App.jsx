@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -42,33 +42,25 @@ function NavbarCloser() {
 
   useEffect(() => {
     const navbarCollapse = document.getElementById("navbarNav");
-    if (!navbarCollapse || !window.bootstrap) return;
+    if (!navbarCollapse) return;
 
-    // Obtén o crea la instancia de Collapse
-    let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-    if (!bsCollapse) {
-      bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
-    }
-
-    // Cierra el navbar solo si está visible
-    if (navbarCollapse.classList.contains("show")) {
-      bsCollapse.hide();
-    }
-  }, [location]); // cada vez que la ruta cambia
+    // ✅ Elimina la clase show para cerrar el menú en móviles
+    navbarCollapse.classList.remove("show");
+  }, [location]); // se ejecuta cada vez que cambias de ruta
 
   return null;
 }
 
 function App() {
   return (
-    <>
+    <Router>
       <ScrollRestoration />
       <NavbarCloser />
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
       <Footer />
-    </>
+    </Router>
   );
 }
 
