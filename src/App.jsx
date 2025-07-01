@@ -41,12 +41,15 @@ function NavbarCloser() {
   const location = useLocation();
 
   useEffect(() => {
-    const navbarCollapse = document.getElementById("navbarNav");
-    if (!navbarCollapse) return;
-
-    // ✅ Elimina la clase show para cerrar el menú en móviles
-    navbarCollapse.classList.remove("show");
-  }, [location]); // se ejecuta cada vez que cambias de ruta
+    try {
+      const navbarCollapse = document.getElementById("navbarNav");
+      if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+        navbarCollapse.classList.remove("show");
+      }
+    } catch (error) {
+      console.error("Error al intentar cerrar el navbar:", error);
+    }
+  }, [location]);
 
   return null;
 }
