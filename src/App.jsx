@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -6,6 +6,7 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollRestoration from "./components/ScrollRestoration";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 
@@ -14,10 +15,22 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-        <Route path="/productos" element={<PageTransition><Products /></PageTransition>} />
-        <Route path="/nosotros" element={<PageTransition><About /></PageTransition>} />
-        <Route path="/contacto" element={<PageTransition><Contact /></PageTransition>} />
+        <Route
+          path="/"
+          element={<PageTransition><Home /></PageTransition>}
+        />
+        <Route
+          path="/productos"
+          element={<PageTransition><Products /></PageTransition>}
+        />
+        <Route
+          path="/nosotros"
+          element={<PageTransition><About /></PageTransition>}
+        />
+        <Route
+          path="/contacto"
+          element={<PageTransition><Contact /></PageTransition>}
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -41,30 +54,28 @@ function NavbarCloser() {
 
   useEffect(() => {
     const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse) {
-      if (navbarCollapse.classList.contains("show")) {
-        console.log("Cerrando el navbar por cambio de ruta");
-        navbarCollapse.classList.remove("show");
-      } else {
-        console.log("Navbar ya cerrado al cambiar de ruta");
+    if (navbarCollapse && window.bootstrap) {
+      let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
+      if (!bsCollapse) {
+        bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
       }
-    } else {
-      console.log("No se encontró #navbarNav en el DOM");
+      bsCollapse.hide();
     }
-  }, [location]);
+  }, [location]); // cierra navbar en cada navegación
 
-  return null;
+  return null; // este componente no renderiza nada visible
 }
 
 function App() {
   return (
-    <Router>
-      <NavbarCloser />
+    <>
+      <ScrollRestoration />
+      <NavbarCloser /> {/* ✅ cierra el menú al navegar */}
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
       <Footer />
-    </Router>
+    </>
   );
 }
 
