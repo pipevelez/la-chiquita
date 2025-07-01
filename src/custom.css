@@ -41,3 +41,7 @@ body {
 .nav-link:hover {
   color: #e9b274 !important;
 }
+
+.category-title {
+  scroll-margin-top: 80px; /* Ajusta a la altura de tu navbar o cabecera */
+}

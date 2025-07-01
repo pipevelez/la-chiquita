@@ -7,7 +7,6 @@ const products = {
       description: "Crujientes y suaves, rellenas de exquisitas frutas confitadas. El toque perfecto de dulzura para acompañar tu café.",
       image: "/Danesas.png",
     },
-   
   ],
   Bebidas: [
     {
@@ -15,7 +14,6 @@ const products = {
       description: "Fresco, cremoso y 100% artesanal. ¡El sabor de casa en cada sorbo!",
       image: "/Kumis.png",
     },
-    
   ],
   Dulces: [
     {
@@ -34,7 +32,6 @@ const products = {
       image: "/Torta_mar.png",
     }
   ],
-
   Especialidades: [
     {
       name: "Pizza",
@@ -73,7 +70,9 @@ export default function Products() {
       {/* Categorías */}
       {Object.entries(products).map(([category, items], idx) => (
         <section key={idx} id={category} className="mb-5">
-          <h2 className="mb-3" style={{ color: "#321808" }}>{category}</h2>
+          <h2 className="mb-3 category-title" style={{ color: "#321808" }}>
+            {category}
+          </h2>
           <div className="row g-3">
             {items.map((product, index) => (
               <div className="col-6 col-md-3" key={index}>
@@ -83,7 +82,6 @@ export default function Products() {
           </div>
         </section>
       ))}
-
     </main>
   );
 }
