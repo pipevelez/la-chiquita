@@ -3,28 +3,24 @@ import ProductCard from "../components/ProductCard";
 
 const recommendedProducts = [
   {
-    name: "Pan de Chocolate",
-    description: "Delicioso pan relleno de chocolate semi amargo.",
-    price: "$4.500",
-    image: "/icono.jpg",
+      name: "Milhoja",
+      description: "Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce.",
+      image: "/Milhojas.png",
   },
   {
-    name: "Croissant",
-    description: "Clásico croissant hojaldrado, recién horneado.",
-    price: "$3.800",
-    image: "/icono.jpg",
+      name: "Torta de Maracuyá",
+      description: "Suave, esponjosa y con el toque perfecto de maracuyá natural. Una explosión de sabor tropical en cada bocado.",
+      image: "/Torta_mar.png",
   },
   {
-    name: "Café Especial",
-    description: "Café colombiano 100% suave y aromático.",
-    price: "$5.000",
-    image: "/icono.jpg",
+      name: "Pizza",
+      description: "Masa suave y crujiente, cubierta con salsa casera, queso derretido y jamón. ¡Un pedazo de sabor irresistible que te hará querer más!",
+      image: "/Pizza.png",
   },
   {
-    name: "Galletas Artesanales",
-    description: "Galletas crocantes con chispas de chocolate.",
-    price: "$2.500",
-    image: "/icono.jpg",
+      name: "Kumis",
+      description: "Fresco, cremoso y 100% artesanal. ¡El sabor de casa en cada sorbo!",
+      image: "/Kumis.png",
   },
 ];
 
