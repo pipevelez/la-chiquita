@@ -40,7 +40,7 @@ export default function Home() {
       <video
         className="mx-auto mb-5 d-block"
         style={{
-          width: "300px",
+          width: "350px",
           height: "400px",
           borderRadius: "12px",
           objectFit: "cover",
