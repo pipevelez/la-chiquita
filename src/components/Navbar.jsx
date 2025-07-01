@@ -4,10 +4,12 @@ export default function Navbar() {
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById("navbarNav");
     if (navbarCollapse && window.bootstrap) {
-      const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-      if (bsCollapse) {
-        bsCollapse.hide();
+      let bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
+      // Si no existe instancia, la creamos manualmente para asegurarnos
+      if (!bsCollapse) {
+        bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
       }
+      bsCollapse.hide();
     }
   };
 
