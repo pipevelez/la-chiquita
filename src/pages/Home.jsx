@@ -41,7 +41,7 @@ export default function Home() {
         className="mx-auto mb-5 d-block"
         style={{
           width: "300px",
-          height: "200px",
+          height: "300px",
           borderRadius: "12px",
           objectFit: "cover",
         }}
