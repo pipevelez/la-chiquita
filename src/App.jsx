@@ -6,6 +6,7 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollRestoration from "./components/ScrollRestoration"; // nuevo
 import Footer from "./components/Footer";
 
 function AnimatedRoutes() {
@@ -74,9 +75,10 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollRestoration /> {/* reinicia el scroll automáticamente */}
       <Navbar />
       <AnimatedRoutes />
-      <ScrollToTopButton />
+      <ScrollToTopButton /> {/* botón para subir manualmente */}
       <Footer />
     </Router>
   );
