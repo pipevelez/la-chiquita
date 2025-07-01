@@ -6,7 +6,6 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-import ScrollRestoration from "./components/ScrollRestoration";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 
@@ -41,13 +40,16 @@ function NavbarCloser() {
   const location = useLocation();
 
   useEffect(() => {
-    try {
-      const navbarCollapse = document.getElementById("navbarNav");
-      if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse) {
+      if (navbarCollapse.classList.contains("show")) {
+        console.log("Cerrando el navbar por cambio de ruta");
         navbarCollapse.classList.remove("show");
+      } else {
+        console.log("Navbar ya cerrado al cambiar de ruta");
       }
-    } catch (error) {
-      console.error("Error al intentar cerrar el navbar:", error);
+    } else {
+      console.log("No se encontró #navbarNav en el DOM");
     }
   }, [location]);
 
@@ -57,7 +59,6 @@ function NavbarCloser() {
 function App() {
   return (
     <Router>
-      <ScrollRestoration />
       <NavbarCloser />
       <Navbar />
       <AnimatedRoutes />
