@@ -30,8 +30,7 @@ export default function Navbar() {
       <div className="container-fluid px-3 px-md-5">
         <Link
           to="/"
-          className="navbar-brand d-flex align-items-center"
-          style={{ color: "#faf7e7", fontSize: "1.5rem", fontWeight: "bold" }}
+          className="navbar-brand d-flex align-items-center navbar-brand-title"
           onClick={handleNavLinkClick}
         >
           <img
@@ -41,8 +40,9 @@ export default function Navbar() {
             height="60"
             className="me-2 rounded-circle"
           />
-          La Chiquita
+          LA CHIQUITA
         </Link>
+
 
         <button
           className="navbar-toggler"
