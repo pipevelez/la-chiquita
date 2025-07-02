@@ -1,8 +1,9 @@
 @font-face {
   font-family: 'Moonglow Std Extended';
-  src: url('/fonts/moonglow-extended.otf') format('opentype');
+  src: url('/font/moonglow-extended.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* Mejora la visualización mientras carga */
 }
 
 .navbar-brand-title {
@@ -10,6 +11,7 @@
   color: #faf7e7;
   font-size: 1.5rem;
   font-weight: bold;
+  letter-spacing: 0.5px; /* Mejor legibilidad */
 }
 
 body {
