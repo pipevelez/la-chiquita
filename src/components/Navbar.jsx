@@ -40,7 +40,7 @@ export default function Navbar() {
             height="60"
             className="me-2 rounded-circle"
           />
-          LA CHIQUITA
+          La Chiquita
         </Link>
 
 
