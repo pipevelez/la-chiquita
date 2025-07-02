@@ -43,7 +43,6 @@ export default function Navbar() {
           La Chiquita
         </Link>
 
-
         <button
           className="navbar-toggler"
           type="button"
