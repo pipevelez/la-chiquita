@@ -69,6 +69,11 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/nuestra-cocina" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
+                Nuestra Cocina
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/nosotros" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
                 Nosotros
               </Link>

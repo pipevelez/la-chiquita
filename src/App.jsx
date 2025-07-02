@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import NuestraCocina from "./pages/NuestraCocina"; // Importa la nueva página
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import ScrollRestoration from "./components/ScrollRestoration";
 import Footer from "./components/Footer";
@@ -30,6 +31,11 @@ function AnimatedRoutes() {
         <Route
           path="/contacto"
           element={<PageTransition><Contact /></PageTransition>}
+        />
+        {/* Nueva ruta para Nuestra Cocina */}
+        <Route
+          path="/nuestra-cocina"
+          element={<PageTransition><NuestraCocina /></PageTransition>}
         />
       </Routes>
     </AnimatePresence>
@@ -89,7 +95,7 @@ function App() {
   return (
     <>
       <ScrollRestoration />
-      <NavbarCloser /> {/* ✅ cierra el menú al navegar */}
+      <NavbarCloser />
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
