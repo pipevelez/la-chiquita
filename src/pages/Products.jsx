@@ -38,6 +38,18 @@ const products = {
       description: "Masa suave y crujiente, cubierta con salsa casera, queso derretido y jamón. ¡Un pedazo de sabor irresistible que te hará querer más!",
       image: "/Pizza.png",
     },
+
+    {
+      name: "Copa de Chocolate",
+      description: "Deliciosa base de chocolate comestible, rellena de crema suave, frutas frescas, virutas de chocolate blanco y un toque de sabor irresistible. ¡Un postre que conquista a primera vista!",
+      image: "/Copa_chocolate.png",
+    },
+
+    {
+      name: "Vaso Fresas con Crema",
+      description: "Capas irresistibles de bizcocho suave, crema batida, salsa de fresa natural, galleta y una cereza para coronar. Dulzura y suavidad en cada cucharada.",
+      image: "/Fresas_crema.png",
+    }
   ],
 };
 
