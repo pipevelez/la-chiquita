@@ -5,7 +5,7 @@ const products = {
     {
       name: "Danesa de frutas",
       description: "Crujientes y suaves, rellenas de exquisitas frutas confitadas. El toque perfecto de dulzura para acompañar tu café.",
-      image: "/Danesas.png",
+      image: "/panaderia/Danesas.png",
     },
   ],
   Bebidas: [
@@ -19,24 +19,24 @@ const products = {
     {
       name: "Alfajor",
       description: "Doble galleta suave, rellena de cremoso arequipe y bañada en coco rallado. Un bocado que te hará sonreír.",
-      image: "/Alfajores.png",
+      image: "/dulces/Alfajores.png",
     },
     {
       name: "Milhoja",
       description: "Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce.",
-      image: "/Milhojas.png",
+      image: "/dulces/Milhojas.png",
     },
     {
       name: "Torta de Maracuyá",
       description: "Suave, esponjosa y con el toque perfecto de maracuyá natural. Una explosión de sabor tropical en cada bocado.",
-      image: "/Torta_mar.png",
+      image: "/dulces/Torta_mar.png",
     }
   ],
   Especialidades: [
     {
       name: "Pizza",
       description: "Masa suave y crujiente, cubierta con salsa casera, queso derretido y jamón. ¡Un pedazo de sabor irresistible que te hará querer más!",
-      image: "/Pizza.png",
+      image: "/especialidades/Pizza.png",
     },
   ],
 
@@ -44,13 +44,13 @@ const products = {
     {
       name: "Copa de Chocolate",
       description: "Deliciosa base de chocolate comestible, rellena de crema suave, frutas frescas, virutas de chocolate blanco y un toque de sabor irresistible. ¡Un postre que conquista a primera vista!",
-      image: "/Copa_chocolate.png",
+      image: "/postres/Copa_chocolate.png",
     },
 
     {
       name: "Vaso Fresas con Crema",
       description: "Capas irresistibles de bizcocho suave, crema batida, salsa de fresa natural, galleta y una cereza para coronar. Dulzura y suavidad en cada cucharada.",
-      image: "/Fresas_crema.png",
+      image: "/postres/Fresas_crema.png",
     }
   ]
 };
