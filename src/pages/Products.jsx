@@ -56,19 +56,19 @@ const products = {
     {
       name: "Postre de Leche Asada",
       description: "Un clásico lleno de tradición, con el sabor casero que enamora en cada bocado. Su textura suave y su capa doradita hacen de este postre el cierre perfecto para cualquier ocasión.",
-      image: "/postres/leche_asada.jpg",
+      image: "/postres/leche_asada.JPG",
     },
 
     {
       name: "Postre de Tres Leches",
       description: "La suavidad del bizcocho bañado en tres leches, combinado con el toque dulce del chocolate y la frescura de la fresa, crean una experiencia irresistible. Un postre que derrite corazones en cada cucharada.",
-      image: "/postres/tres_leches.jpg",
+      image: "/postres/tres_leches.JPG",
     },
 
     {
       name: "Postre de Oreo",
       description: "La combinación perfecta entre la cremosidad y el inconfundible sabor de las galletas Oreo. Cada capa está pensada para consentirte con una mezcla irresistible que no podrás dejar de probar.",
-      image: "/postres/oreo.jpg",
+      image: "/postres/oreo.JPG",
     }
   ]
 };
