@@ -5,22 +5,22 @@ const recommendedProducts = [
   {
       name: "Milhoja",
       description: "Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce.",
-      image: "/Milhojas.png",
+      image: "/dulces/Milhojas.png",
   },
   {
       name: "Torta de Maracuyá",
       description: "Suave, esponjosa y con el toque perfecto de maracuyá natural. Una explosión de sabor tropical en cada bocado.",
-      image: "/Torta_mar.png",
+      image: "/dulces/Torta_mar.png",
   },
   {
       name: "Pizza",
       description: "Masa suave y crujiente, cubierta con salsa casera, queso derretido y jamón. ¡Un pedazo de sabor irresistible que te hará querer más!",
-      image: "/Pizza.png",
+      image: "/especialidades/Pizza.png",
   },
   {
       name: "Kumis",
       description: "Fresco, cremoso y 100% artesanal. ¡El sabor de casa en cada sorbo!",
-      image: "/Kumis.png",
+      image: "/bebidas/Kumis.png",
   },
 ];
 
