@@ -12,7 +12,7 @@ const products = {
     {
       name: "Kumis",
       description: "Fresco, cremoso y 100% artesanal. ¡El sabor de casa en cada sorbo!",
-      image: "/Kumis.png",
+      image: "/bebidas/Kumis.png",
     },
   ],
   Dulces: [
