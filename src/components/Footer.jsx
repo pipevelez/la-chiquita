@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="col-md-4 mb-3">
             <h5 style={{ color: "#e9b274" }}>Contacto</h5>
             <p>📍 Cra 3 #10-02 Belalcázar, Caldas</p>
-            <p>📞 +57 320 3810 931</p>
+            <p>📞 +57 320 3818 931</p>
             <p>✉️ contacto@lachiquita.com</p>
           </div>
 
