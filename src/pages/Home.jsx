@@ -51,7 +51,7 @@ export default function Home() {
           {/* 📺 Video */}
           <video
             className="welcome-video"
-            src="/Hojaldre.mp4"
+            src="/apariencia/video_home.mp4"
             controls
             muted
             autoPlay
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
         <div className="col-md-6 text-center">
           <img 
-            src="/apariencia/fachada.JPG"
+            src="/apariencia/fondo_home.JPG"
             alt="Panadera La Chiquita"
             className="about-image"
             onError={(e) => {

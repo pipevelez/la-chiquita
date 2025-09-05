@@ -6,7 +6,7 @@ export default function About() {
       <div className="row align-items-center">
         <div className="col-md-6 mb-4 mb-md-0">
           <img
-            src="/icono.jpg"
+            src="/apariencia/about.PNG"
             alt="Panadería La Chiquita"
             className="img-fluid rounded shadow"
           />
