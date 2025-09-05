@@ -11,8 +11,8 @@ export default function WhatsAppButton() {
   return (
     <div style={{ 
       position: "fixed", 
-      bottom: "20px", 
-      right: "20px", 
+      bottom: "40px", 
+      right: "40px", 
       zIndex: 1000 
     }}>
       {/* Tooltip */}
