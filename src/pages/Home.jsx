@@ -103,7 +103,7 @@ export default function Home() {
         <div className="col-md-6">
           <h2 className="about-title">NUESTRA HISTORIA</h2>
           <p className="about-text">
-            Desde 1990, en <strong>La Chiquita</strong> hemos mantenido viva la tradición 
+            Desde 1978, en <strong>La Chiquita</strong> hemos mantenido viva la tradición 
             de la panadería artesanal. Cada mañana amasamos con dedicación, 
             usando ingredientes frescos y recetas transmitidas por generaciones.
           </p>
