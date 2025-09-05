@@ -5,10 +5,11 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import NuestraCocina from "./pages/NuestraCocina"; // Importa la nueva página
+import NuestraCocina from "./pages/NuestraCocina";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import ScrollRestoration from "./components/ScrollRestoration";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton"; // Importa el nuevo componente
 import { useEffect } from "react";
 
 function AnimatedRoutes() {
@@ -32,7 +33,6 @@ function AnimatedRoutes() {
           path="/contacto"
           element={<PageTransition><Contact /></PageTransition>}
         />
-        {/* Nueva ruta para Nuestra Cocina */}
         <Route
           path="/nuestra-cocina"
           element={<PageTransition><NuestraCocina /></PageTransition>}
@@ -64,7 +64,6 @@ function NavbarCloser() {
       const navbarToggler = document.querySelector('.navbar-toggler');
       
       if (navbarCollapse) {
-        // Cierre compatible con Bootstrap
         if (window.bootstrap) {
           const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse) || 
                             new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
@@ -72,7 +71,6 @@ function NavbarCloser() {
             bsCollapse.hide();
           }
         } 
-        // Fallback manual
         else if (navbarCollapse.classList.contains('show')) {
           navbarCollapse.classList.remove('show');
           if (navbarToggler) {
@@ -83,7 +81,6 @@ function NavbarCloser() {
       }
     };
 
-    // Pequeño retraso para sincronizar con la animación
     const timer = setTimeout(closeMenu, 10);
     return () => clearTimeout(timer);
   }, [location]);
@@ -99,6 +96,7 @@ function App() {
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
+      <WhatsAppButton /> {/* Agrega el botón de WhatsApp aquí */}
       <Footer />
     </>
   );
