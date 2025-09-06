@@ -319,61 +319,177 @@ body {
   margin: 40px 0;
 }
 
-/* ✅ Mejoras para el carrusel de tortas - Eliminar espacios blancos */
+/* ✅ CARRUSEL MEJORADO - Mantiene relación de aspecto sin cortar imágenes */
 .tortas-carousel-container {
   max-width: 600px;
   margin: 0 auto;
-  overflow: hidden;
+  padding: 0 15px;
 }
 
 .torta-slide {
-  padding: 0;
+  padding: 0 10px;
   outline: none;
 }
 
 .torta-card {
-  background: transparent; /* Fondo transparente para que coincida con la sección */
+  background: transparent;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(50, 24, 8, 0.2);
+  box-shadow: 0 5px 15px rgba(50, 24, 8, 0.2);
   transition: transform 0.3s ease;
-  margin: 0 10px;
-  height: 350px;
+  margin: 0 auto;
+  height: 400px; /* Altura fija para contenedor */
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 15px;
 }
 
 .torta-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
-  object-position: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Mantiene relación de aspecto sin recortar */
+  border-radius: 10px;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%); /* Mismo fondo que la sección */
 }
 
-/* Eliminar el gradiente anterior que podría estar causando problemas */
-.torta-card::before {
-  content: none;
+/* Efecto hover para desktop */
+@media (min-width: 769px) {
+  .torta-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .torta-card:hover .torta-image {
+    transform: scale(1.05);
+  }
 }
 
-/* Ajustar el contenedor del slider */
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+  .tortas-carousel-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .torta-card {
+    height: 350px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.4rem;
+    padding: 0 15px;
+  }
+  
+  /* Ajustar tamaño de flechas */
+  .slick-prev {
+    left: 0px !important;
+    z-index: 1;
+  }
+  
+  .slick-next {
+    right: 0px !important;
+    z-index: 1;
+  }
+  
+  .slick-prev:before, 
+  .slick-next:before {
+    font-size: 20px !important;
+  }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 576px) {
+  .torta-card {
+    height: 300px;
+    margin: 0 2px;
+  }
+  
+  .torta-slide {
+    padding: 0 5px;
+  }
+  
+  .image-container {
+    padding: 10px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ajustes para el título de la sección */
+  .tortas-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .slick-dots {
+    bottom: -25px !important;
+  }
+  
+  .slick-dots li {
+    margin: 0 2px !important;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+/* Ajustes para móviles muy pequeños */
+@media (max-width: 400px) {
+  .torta-card {
+    height: 250px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mejora para el modo centro */
+.slick-center .torta-card {
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+/* Corrección para el contenedor del slider */
 .slick-list {
-  border-radius: 15px;
-  overflow: hidden;
+  margin: 0 -10px;
+  padding: 10px 0;
 }
 
-/* Asegurar que no haya espacios en los bordes */
-.slick-track {
-  display: flex;
-  align-items: center;
+.slick-slide {
+  padding: 5px;
 }
 
-.torta-card:hover {
-  transform: translateY(-5px);
+/* Asegurar que las flechas sean visibles en móviles */
+.slick-prev:before, 
+.slick-next:before {
+  color: #af6a18 !important;
+  opacity: 0.8 !important;
+  font-size: 24px;
 }
 
-.torta-card:hover .torta-image {
-  transform: scale(1.08);
+.slick-prev:hover:before, 
+.slick-next:hover:before {
+  opacity: 1 !important;
 }
 
 /* Estilos para el título general de tortas */
@@ -401,92 +517,4 @@ body {
 
 .slick-dots li.slick-active button:before {
   color: #af6a18 !important;
-}
-
-/* ✅ Mejoras de responsividad para móviles */
-@media (max-width: 768px) {
-  .tortas-carousel-container {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  
-  .torta-card {
-    height: 280px;
-    margin: 0 5px;
-  }
-  
-  .tortas-general-title {
-    font-size: 1.4rem;
-    padding: 0 15px;
-  }
-  
-  /* Ajustar tamaño de flechas en móviles */
-  .slick-prev {
-    left: 5px !important;
-    z-index: 1;
-  }
-  
-  .slick-next {
-    right: 5px !important;
-    z-index: 1;
-  }
-  
-  .slick-prev:before, 
-  .slick-next:before {
-    font-size: 20px !important;
-  }
-  
-  /* Ajustar puntos de navegación */
-  .slick-dots {
-    bottom: -30px !important;
-  }
-  
-  .slick-dots li {
-    margin: 0 3px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .torta-card {
-    height: 220px;
-  }
-  
-  .tortas-general-title {
-    font-size: 1.2rem;
-  }
-  
-  /* Ajustes para el título de la sección */
-  .tortas-section h2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .torta-card {
-    height: 180px;
-  }
-}
-
-/* Mejora para el modo centro en móviles */
-.slick-center .torta-card {
-  transform: scale(1.05);
-  z-index: 2;
-}
-
-/* Asegurar que las imágenes se muestren correctamente */
-.torta-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-}
-
-/* Corrección para el contenedor del slider */
-.slick-list {
-  margin: 0 -5px;
-}
-
-.slick-slide {
-  padding: 5px;
 }
