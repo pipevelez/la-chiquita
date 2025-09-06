@@ -256,13 +256,13 @@ body {
 
 /* ✅ VIDEO CORREGIDO - Proporción 9:16 */
 .welcome-video {
-  width: 270px;           /* ✅ Proporción exacta 9:16 */
-  height: 480px;          /* ✅ 270/480 = 9/16 */
+  width: 270px;
+  height: 480px;
   border-radius: 12px;
-  object-fit: cover;      /* ✅ Para llenar el espacio */
+  object-fit: cover;
   box-shadow: 0 8px 24px rgba(50, 24, 8, 0.4);
   border: 3px solid #e9b274;
-  background-color: #000; /* ✅ Fondo negro para áreas vacías */
+  background-color: #000;
 }
 
 .recommended-title {
@@ -286,8 +286,8 @@ body {
   }
   
   .welcome-video {
-    width: 200px;         /* ✅ Proporción 9:16 para tablet */
-    height: 355px;        /* ✅ 200/355 ≈ 9/16 */
+    width: 200px;
+    height: 355px;
   }
 }
 
@@ -306,9 +306,123 @@ body {
   }
   
   .welcome-video {
-    width: 160px;         /* ✅ Proporción 9:16 para móvil */
-    height: 285px;        /* ✅ 160/285 ≈ 9/16 */
+    width: 160px;
+    height: 285px;
   }
 }
 
-/* ✅ Eliminados los estilos del botón de pan que no estás usando */
+/* ✅ OPCIÓN 2 - Estilos para el carrusel de Tortas (MEJORADA) */
+.tortas-special-section {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 40px 0;
+}
+
+.tortas-carousel-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.torta-slide {
+  padding: 0 15px;
+  outline: none;
+}
+
+/* Card de tortas - Opción 2 con gradiente */
+.torta-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(50, 24, 8, 0.2);
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+  height: 350px;
+  position: relative;
+}
+
+.torta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+}
+
+/* Gradiente para suavizar bordes y eliminar efecto de espacio blanco */
+.torta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 80%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.torta-card:hover {
+  transform: translateY(-5px);
+}
+
+.torta-card:hover .torta-image {
+  transform: scale(1.08);
+}
+
+/* Estilos para el título general de tortas */
+.tortas-general-title {
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #654321 !important;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+/* Estilos para los controles del carrusel */
+.slick-prev:before,
+.slick-next:before {
+  color: #af6a18 !important;
+  font-size: 24px;
+}
+
+.slick-dots li button:before {
+  color: #e9b274 !important;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #af6a18 !important;
+}
+
+/* Responsive para el carrusel */
+@media (max-width: 768px) {
+  .tortas-carousel-container {
+    max-width: 90%;
+  }
+  
+  .torta-card {
+    height: 300px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .torta-card {
+    height: 250px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.3rem;
+  }
+}

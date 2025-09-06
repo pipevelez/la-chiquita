@@ -1,16 +1,15 @@
 import { useEffect, useState, useRef } from "react";
 import ProductCard from "../components/ProductCard";
+import TortasCarousel from "../components/TortasCarousel";
 
 // Datos locales de productos (como respaldo)
 const localProducts = {
   Panadería: [
-
     {
       name: "Pan",
       description: "Crujiente por fuera, suave y esponjoso por dentro, con ese aroma irresistible que solo tiene el pan recién horneado. Tradición, calidad y sabor único en cada mordisco, hecho con amor desde 1978 en Panadería La Chiquita.",
       image: "/panaderia/pan.PNG",
     },
-
     {
       name: "Danesa de frutas",
       description: "Crujientes y suaves, rellenas de exquisitas frutas confitadas. El toque perfecto de dulzura para acompañar tu café.",
@@ -69,17 +68,37 @@ const localProducts = {
       description: "La suavidad del bizcocho bañado en tres leches, combinado con el toque dulce del chocolate y la frescura de la fresa, crean una experiencia irresistible. Un postre que derrite corazones en cada cucharada.",
       image: "/postres/tres_leches.JPG",
     },
-    
     {
       name: "Postre de Oreo",
       description: "La combinación perfecta entre la cremosidad y el inconfundible sabor de las galletas Oreo. Cada capa está pensada para consentirte con una mezcla irresistible que no podrás dejar de probar.",
       image: "/postres/oreo.JPG",
     },
-
     {
       name: "Porcion de Torta de Queso",
       description: "Suave, cremosa y con ese toque casero que conquista paladares. Un postre tradicional que combina la sencillez del queso con el sabor auténtico de nuestra panadería. ¡No te quedes sin probarla!",
       image: "/postres/torta_queso.JPG",
+    }
+  ],
+  Tortas: [
+    {
+      name: "Torta de Chocolate",
+      description: "Deliciosa torta de chocolate con relleno cremoso y cubierta de ganache",
+      image: "/tortas/torta_chocolate.jpg",
+    },
+    {
+      name: "Torta de Frutas",
+      description: "Torta fresca con frutas de la temporada y crema batida",
+      image: "/tortas/torta_frutas.jpg",
+    },
+    {
+      name: "Torta de Queso",
+      description: "Clásica torta de queso con base de galleta y topping de frutos rojos",
+      image: "/tortas/torta_queso.jpg",
+    },
+    {
+      name: "Torta de Maracuyá",
+      description: "Torta tropical con sabor a maracuyá y relleno de crema",
+      image: "/tortas/torta_maracuya.jpg",
     }
   ]
 };
@@ -98,7 +117,7 @@ export default function Products() {
         setTimeout(() => {
           const element = document.getElementById(scrollToCategory);
           if (element) {
-            const yOffset = -70; // ✅ Reducido de -80 a -40 (baja más)
+            const yOffset = -70;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
           }
@@ -149,7 +168,7 @@ export default function Products() {
   const scrollToCategory = (categorySlug) => {
     const element = document.getElementById(categorySlug);
     if (element) {
-      const yOffset = -70; // ✅ Reducido de -80 a -40 (baja más)
+      const yOffset = -70;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -193,8 +212,10 @@ export default function Products() {
         })}
       </div>
 
-      {/* Categorías */}
+      {/* Categorías normales (excluyendo Tortas) */}
       {Object.entries(products).map(([category, items], idx) => {
+        if (category === "Tortas") return null; // Excluimos Tortas del mapeo normal
+        
         const categorySlug = category.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
         
         return (
@@ -205,7 +226,7 @@ export default function Products() {
           >
             <div 
               id={categorySlug} 
-              style={{ position: "relative", top: "-40px" }} // ✅ Reducido de -80px a -40px
+              style={{ position: "relative", top: "-40px" }}
             ></div>
 
             <h2 className="mb-3" style={{ color: "#321808" }}>
@@ -226,6 +247,19 @@ export default function Products() {
           </section>
         );
       })}
+
+      {/* Sección especial para Tortas - Carrusel */}
+      <section 
+        className="mb-5 tortas-special-section"
+        ref={(el) => (categoriesRef.current["tortas"] = el)}
+      >
+        <div 
+          id="tortas" 
+          style={{ position: "relative", top: "-40px" }}
+        ></div>
+        
+        <TortasCarousel />
+      </section>
 
       <div className="text-center my-5">
         <button 
