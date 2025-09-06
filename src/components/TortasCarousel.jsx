@@ -13,7 +13,27 @@ const TortasCarousel = () => {
     centerMode: true,
     centerPadding: '0px',
     arrows: true,
-    adaptiveHeight: false // Asegurar altura fija
+    adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '15px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '10px',
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   const tortas = [
@@ -50,24 +70,11 @@ const TortasCarousel = () => {
           {tortas.map((torta, index) => (
             <div key={index} className="torta-slide">
               <div className="torta-card">
-                <div className="image-container" style={{
-                  width: '100%',
-                  height: '350px',
-                  background: 'linear-gradient(135deg, #faf7e7 0%, #e9b274 100%)',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  overflow: 'hidden'
-                }}>
+                <div className="image-container">
                   <img 
                     src={torta.image} 
                     alt="Torta de tres leches"
                     className="torta-image"
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      objectFit: 'contain'
-                    }}
                     onError={(e) => {
                       e.target.src = "/placeholder-torta.jpg";
                     }}
