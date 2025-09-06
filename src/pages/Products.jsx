@@ -4,6 +4,13 @@ import ProductCard from "../components/ProductCard";
 // Datos locales de productos (como respaldo)
 const localProducts = {
   Panadería: [
+
+    {
+      name: "Pan",
+      description: "Crujiente por fuera, suave y esponjoso por dentro, con ese aroma irresistible que solo tiene el pan recién horneado. Tradición, calidad y sabor único en cada mordisco, hecho con amor desde 1978 en Panadería La Chiquita.",
+      image: "/panaderia/pan.PNG",
+    },
+
     {
       name: "Danesa de frutas",
       description: "Crujientes y suaves, rellenas de exquisitas frutas confitadas. El toque perfecto de dulzura para acompañar tu café.",
@@ -62,10 +69,17 @@ const localProducts = {
       description: "La suavidad del bizcocho bañado en tres leches, combinado con el toque dulce del chocolate y la frescura de la fresa, crean una experiencia irresistible. Un postre que derrite corazones en cada cucharada.",
       image: "/postres/tres_leches.JPG",
     },
+    
     {
       name: "Postre de Oreo",
       description: "La combinación perfecta entre la cremosidad y el inconfundible sabor de las galletas Oreo. Cada capa está pensada para consentirte con una mezcla irresistible que no podrás dejar de probar.",
       image: "/postres/oreo.JPG",
+    },
+
+    {
+      name: "Porcion de Torta de Queso",
+      description: "Suave, cremosa y con ese toque casero que conquista paladares. Un postre tradicional que combina la sencillez del queso con el sabor auténtico de nuestra panadería. ¡No te quedes sin probarla!",
+      image: "/postres/torta_queso.JPG",
     }
   ]
 };
