@@ -6,10 +6,11 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NuestraCocina from "./pages/NuestraCocina";
+import Visitanos from "./pages/Visitanos"; // Nueva importación
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import ScrollRestoration from "./components/ScrollRestoration";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton"; // Importa el nuevo componente
+import WhatsAppButton from "./components/WhatsAppButton";
 import { useEffect } from "react";
 
 function AnimatedRoutes() {
@@ -36,6 +37,10 @@ function AnimatedRoutes() {
         <Route
           path="/nuestra-cocina"
           element={<PageTransition><NuestraCocina /></PageTransition>}
+        />
+        <Route
+          path="/visitanos"
+          element={<PageTransition><Visitanos /></PageTransition>}
         />
       </Routes>
     </AnimatePresence>
@@ -96,7 +101,7 @@ function App() {
       <Navbar />
       <AnimatedRoutes />
       <ScrollToTopButton />
-      <WhatsAppButton /> {/* Agrega el botón de WhatsApp aquí */}
+      <WhatsAppButton />
       <Footer />
     </>
   );

@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="container-fluid px-3 px-md-5">
         <Link
           to="/"
-          className="navbar-brand d-flex align-items-center navbar-brand-title" /* Clase corregida */
+          className="navbar-brand d-flex align-items-center navbar-brand-title"
           onClick={handleNavLinkClick}
         >
           <img
@@ -75,6 +75,11 @@ export default function Navbar() {
             <li className="nav-item">
               <Link to="/nosotros" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
                 Nosotros
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/visitanos" className="nav-link text-light fw-semibold fs-5" onClick={handleNavLinkClick}>
+                Visítanos
               </Link>
             </li>
             <li className="nav-item">

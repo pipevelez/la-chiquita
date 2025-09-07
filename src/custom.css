@@ -518,3 +518,383 @@ body {
 .slick-dots li.slick-active button:before {
   color: #af6a18 !important;
 }
+
+/* ✅ Sección de Ubicación */
+.location-section {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 60px 40px;
+  margin: 60px 0;
+  box-shadow: 0 10px 30px rgba(50, 24, 8, 0.1);
+  border: 2px solid #e9b274;
+}
+
+.location-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.location-text {
+  color: #654321;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.location-address {
+  color: #321808;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(233, 178, 116, 0.2);
+  border-radius: 8px;
+  border-left: 4px solid #af6a18;
+}
+
+.location-info {
+  color: #654321;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.location-info p {
+  margin-bottom: 5px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+}
+
+/* Botón de Google Maps */
+.map-container + .text-center .btn {
+  background-color: #af6a18;
+  border-color: #af6a18;
+  border-radius: 20px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.map-container + .text-center .btn:hover {
+  background-color: #e9b274;
+  border-color: #e9b274;
+  color: #321808;
+  transform: translateY(-2px);
+}
+
+/* Responsive para la sección de ubicación */
+@media (max-width: 768px) {
+  .location-section {
+    padding: 40px 20px;
+  }
+  
+  .location-title {
+    font-size: 2rem;
+  }
+  
+  .location-text,
+  .location-address {
+    font-size: 1rem;
+  }
+  
+  .map-container iframe {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .location-section {
+    padding: 30px 15px;
+    text-align: center;
+  }
+  
+  .location-title {
+    font-size: 1.8rem;
+  }
+  
+  .map-container iframe {
+    height: 250px;
+  }
+  
+  .location-info {
+    text-align: left;
+  }
+}
+
+/* ✅ Estilos para la página Visítanos */
+.visitanos-hero {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.visitanos-main-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.visitanos-subtitle {
+  color: #654321;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.visitanos-hero-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+}
+
+.visitanos-info-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.map-container-large {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e9b274;
+  height: 100%;
+}
+
+.info-card-title {
+  color: #321808;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #af6a18;
+  padding-bottom: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.contact-item strong {
+  color: #321808;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  color: #654321;
+  margin: 0;
+}
+
+.services-section {
+  margin-bottom: 60px;
+}
+
+.service-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #faf7e7 0%, rgba(233, 178, 116, 0.3) 100%);
+  border-radius: 12px;
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #321808;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  color: #654321;
+  line-height: 1.6;
+}
+
+.contact-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact-btn {
+  background-color: #af6a18;
+  border-color: #af6a18;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e9b274;
+  border-color: #e9b274;
+  color: #321808;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(50, 24, 8, 0.2);
+}
+
+.directions-section {
+  margin-bottom: 40px;
+}
+
+.direction-card {
+  background: linear-gradient(135deg, #faf7e7 0%, rgba(233, 178, 116, 0.2) 100%);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px 0;
+  border-left: 4px solid #af6a18;
+}
+
+.direction-card h4 {
+  color: #321808;
+  margin-bottom: 15px;
+}
+
+.direction-card p {
+  color: #654321;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .visitanos-hero {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .visitanos-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .visitanos-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .info-card {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .visitanos-main-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .map-container-large iframe {
+    height: 300px;
+  }
+  
+  .contact-btn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ✅ Botón de WhatsApp para el carrusel de tortas */
+.whatsapp-btn {
+  background-color: #25D366 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 15px 30px !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+  color: white !important;
+}
+
+/* Responsive para el botón de WhatsApp */
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    padding: 12px 25px !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .whatsapp-btn {
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+  }
+}

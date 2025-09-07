@@ -129,6 +129,49 @@ export default function Home() {
           />
         </div>
       </div>
+
+      {/* Sección de Ubicación con Google Maps */}
+      <div className="row align-items-center location-section animate-fade-in-up">
+        <div className="col-md-6">
+          <h2 className="location-title">VISÍTANOS</h2>
+          <p className="location-text">
+            Estamos ubicados en el corazón de Belalcázar, Caldas. Ven y disfruta 
+            de nuestros productos recién horneados en un ambiente familiar y acogedor.
+          </p>
+          <p className="location-address">
+            <strong>Dirección:</strong> Cl. 15, Belalcazar, Caldas
+          </p>
+          <div className="location-info">
+            <p><strong>Horario de atención:</strong></p>
+            <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
+            <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
+          </div>
+        </div>
+        <div className="col-md-6 text-center">
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295.41983789832904!2d-75.81253278392496!3d4.992767080948355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e47852c68f4ff7b%3A0x14670897885c7eee!2sPanaderia%20La%20Chiquita!5e0!3m2!1ses-419!2sco!4v1757275659145!5m2!1ses-419!2sco"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: '12px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación de Panadería La Chiquita"
+            ></iframe>
+          </div>
+          <div className="text-center mt-3">
+            <a
+              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
