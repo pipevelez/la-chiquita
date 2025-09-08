@@ -388,3 +388,66 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   border: 3px solid #faf7e7;
 }
+
+/* Contenedor para el botón de la sección about */
+.about-button-container {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(175, 106, 24, 0.3);
+}
+
+/* Responsive para la sección about */
+@media (max-width: 768px) {
+  .about-section {
+    text-align: center;
+  }
+  
+  .about-button-container {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(175, 106, 24, 0.4);
+  }
+  
+  .about-btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-button-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+  
+  /* Asegurar que la imagen no quede pegada al botón */
+  .about-section .col-md-6:last-child {
+    margin-top: 2rem;
+  }
+}
+
+/* Estilos existentes para about-btn (si no los tienes) */
+.about-btn {
+  background-color: transparent;
+  color: #321808;
+  border: 2px solid #af6a18;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.about-btn:hover {
+  background-color: #af6a18;
+  color: #faf7e7;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(50, 24, 8, 0.2);
+}

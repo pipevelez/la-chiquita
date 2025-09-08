@@ -98,7 +98,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Sección "Conócenos" */}
+      {/* Sección "Conócenos" - CORREGIDA */}
       <div className="row align-items-center about-section animate-fade-in-up">
         <div className="col-md-6">
           <h2 className="about-title">NUESTRA HISTORIA</h2>
@@ -111,12 +111,14 @@ export default function Home() {
             Nuestro compromiso es brindarte el auténtico sabor casero, 
             ese que te transporta a los mejores momentos en familia.
           </p>
-          <Link 
-            to="/nosotros" 
-            className="btn about-btn"
-          >
-            Descubre nuestra historia
-          </Link>
+          <div className="about-button-container"> {/* Contenedor adicional agregado */}
+            <Link 
+              to="/nosotros" 
+              className="btn about-btn"
+            >
+              Descubre nuestra historia
+            </Link>
+          </div>
         </div>
         <div className="col-md-6 text-center">
           <img 
@@ -139,7 +141,7 @@ export default function Home() {
             de nuestros productos recién horneados en un ambiente familiar y acogedor.
           </p>
           <p className="location-address">
-            <strong>Dirección:</strong> Cl. 15, Belalcazar, Caldas
+            <strong>Dirección:</strong> Cra 3 #10-02, Belalcazar, Caldas
           </p>
           <div className="location-info">
             <p><strong>Horario de atención:</strong></p>
@@ -162,7 +164,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-3">
             <a
-              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI1MDkwMy.4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
