@@ -1,0 +1,310 @@
+/* utilities.css - Utilidades, animaciones y responsive */
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efecto hover para desktop del carrusel */
+@media (min-width: 769px) {
+  .torta-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .torta-card:hover .torta-image {
+    transform: scale(1.05);
+  }
+  
+  .slick-prev:hover:before, 
+  .slick-next:hover:before {
+    opacity: 1 !important;
+  }
+}
+
+/* Responsive General */
+@media (max-width: 992px) {
+  .visitanos-info-section {
+    flex-direction: column;
+  }
+  
+  .map-container-large {
+    margin-bottom: 30px;
+  }
+  
+  .info-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Welcome Section */
+  .welcome-section {
+    padding: 40px 15px;
+    min-height: 400px;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .welcome-video {
+    width: 200px;
+    height: 355px;
+  }
+  
+  /* Tortas Carousel */
+  .tortas-carousel-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .torta-card {
+    height: 350px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.4rem;
+    padding: 0 15px;
+  }
+  
+  .slick-prev {
+    left: 0px !important;
+    z-index: 1;
+  }
+  
+  .slick-next {
+    right: 0px !important;
+    z-index: 1;
+  }
+  
+  .slick-prev:before, 
+  .slick-next:before {
+    font-size: 20px !important;
+  }
+  
+  /* Visítanos */
+  .visitanos-hero {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .visitanos-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .visitanos-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .info-card {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .service-card {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info-item {
+    flex-direction: row;
+    text-align: left;
+    padding: 15px;
+  }
+  
+  .service-content {
+    padding: 25px 20px;
+  }
+  
+  .service-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  .service-content p {
+    font-size: 1rem;
+  }
+  
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    padding: 12px 25px !important;
+    font-size: 1.1rem !important;
+  }
+  
+  /* Location Section */
+  .location-section {
+    padding: 40px 20px;
+  }
+  
+  .location-title {
+    font-size: 2rem;
+  }
+  
+  .location-text,
+  .location-address {
+    font-size: 1rem;
+  }
+  
+  .map-container iframe {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Welcome Section */
+  .welcome-section {
+    min-height: 350px;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-video {
+    width: 160px;
+    height: 285px;
+  }
+  
+  /* Tortas Carousel */
+  .torta-card {
+    height: 300px;
+    margin: 0 2px;
+  }
+  
+  .torta-slide {
+    padding: 0 5px;
+  }
+  
+  .image-container {
+    padding: 10px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tortas-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .slick-dots {
+    bottom: -25px !important;
+  }
+  
+  .slick-dots li {
+    margin: 0 2px !important;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  
+  /* Visítanos */
+  .visitanos-main-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .contact-icon {
+    margin: 0 auto;
+  }
+  
+  .contact-details strong {
+    text-align: center;
+  }
+  
+  .service-content {
+    padding: 20px 15px;
+  }
+  
+  .service-content .service-icon {
+    font-size: 3rem;
+  }
+  
+  .service-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .direction-card {
+    margin-bottom: 20px;
+  }
+  
+  .map-container-large iframe {
+    height: 300px;
+  }
+  
+  .contact-btn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+  }
+  
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Location Section */
+  .location-section {
+    padding: 30px 15px;
+    text-align: center;
+  }
+  
+  .location-title {
+    font-size: 1.8rem;
+  }
+  
+  .map-container iframe {
+    height: 250px;
+  }
+  
+  .location-info {
+    text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .torta-card {
+    height: 250px;
+  }
+  
+  .tortas-general-title {
+    font-size: 1.1rem;
+  }
+}

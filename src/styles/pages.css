@@ -1,0 +1,390 @@
+/* pages.css - Estilos específicos de páginas */
+
+/* Página Home - Sección Bienvenida */
+.welcome-section {
+  background-image: url('/apariencia/fachada.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(50, 24, 8, 0.2);
+}
+
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(250, 247, 231, 0.3) 0%, 
+    rgba(233, 178, 116, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.welcome-title {
+  color: #321808;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.welcome-subtitle {
+  color: #654321;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.welcome-video {
+  width: 270px;
+  height: 480px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(50, 24, 8, 0.4);
+  border: 3px solid #e9b274;
+  background-color: #000;
+}
+
+.recommended-title {
+  color: #321808;
+  margin-bottom: 1rem;
+}
+
+/* Página Home - Sección Conócenos */
+.about-section {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 60px 40px;
+  margin: 60px 0;
+  box-shadow: 0 10px 30px rgba(50, 24, 8, 0.1);
+  border: 2px solid #e9b274;
+}
+
+.about-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-text {
+  color: #654321;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-btn {
+  background-color: transparent;
+  color: #321808;
+  border: 2px solid #af6a18;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #af6a18;
+  color: #faf7e7;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(50, 24, 8, 0.2);
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+/* Página Productos - Sección Tortas */
+.tortas-special-section {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 40px 0;
+}
+
+/* Página Visítanos */
+.visitanos-hero {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.visitanos-main-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.visitanos-subtitle {
+  color: #654321;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.visitanos-hero-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+}
+
+.visitanos-info-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.map-container-large {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e9b274;
+  height: 100%;
+}
+
+.info-card-title {
+  text-align: center;
+  color: #321808;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #af6a18;
+}
+
+.contact-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(250, 247, 231, 0.5);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  background: rgba(233, 178, 116, 0.2);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details strong {
+  color: #321808;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-details p {
+  color: #654321;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.services-section {
+  margin-bottom: 60px;
+}
+
+.service-content {
+  padding: 30px;
+  background: linear-gradient(135deg, #faf7e7 0%, rgba(233, 178, 116, 0.3) 100%);
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.service-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(50, 24, 8, 0.15);
+}
+
+.service-content .service-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-content h3 {
+  color: #321808;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.service-content p {
+  color: #654321;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact-btn {
+  background-color: #af6a18;
+  border-color: #af6a18;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e9b274;
+  border-color: #e9b274;
+  color: #321808;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(50, 24, 8, 0.2);
+}
+
+.directions-section {
+  margin-bottom: 40px;
+}
+
+.direction-card {
+  background: linear-gradient(135deg, #faf7e7 0%, rgba(233, 178, 116, 0.2) 100%);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px 0;
+  border-left: 4px solid #af6a18;
+}
+
+.direction-card h4 {
+  color: #321808;
+  margin-bottom: 15px;
+}
+
+.direction-card p {
+  color: #654321;
+  line-height: 1.6;
+}
+
+/* Sección de Ubicación (para Home) */
+.location-section {
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+  border-radius: 15px;
+  padding: 60px 40px;
+  margin: 60px 0;
+  box-shadow: 0 10px 30px rgba(50, 24, 8, 0.1);
+  border: 2px solid #e9b274;
+}
+
+.location-title {
+  color: #321808;
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.location-text {
+  color: #654321;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.location-address {
+  color: #321808;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(233, 178, 116, 0.2);
+  border-radius: 8px;
+  border-left: 4px solid #af6a18;
+}
+
+.location-info {
+  color: #654321;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.location-info p {
+  margin-bottom: 5px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 3px solid #faf7e7;
+}

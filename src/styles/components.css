@@ -1,0 +1,162 @@
+/* components.css - Estilos para componentes específicos */
+
+/* Product Card */
+.product-card-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(50, 24, 8, 0.15);
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50, 24, 8, 0.75);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.product-overlay.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.product-overlay h5 {
+  color: #e9b274 !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.product-overlay .btn {
+  background-color: #e9b274;
+  color: #321808;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.product-overlay .btn:hover {
+  background-color: #faf7e7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Carrusel de Tortas */
+.tortas-carousel-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.torta-slide {
+  padding: 0 10px;
+  outline: none;
+}
+
+.torta-card {
+  background: transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(50, 24, 8, 0.2);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #faf7e7 0%, #e9b274 100%);
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.torta-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.tortas-general-title {
+  font-family: 'Moonglow Std Extended', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #654321 !important;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+/* Controles del carrusel */
+.slick-prev:before,
+.slick-next:before {
+  color: #af6a18 !important;
+  font-size: 24px;
+}
+
+.slick-dots li button:before {
+  color: #e9b274 !important;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #af6a18 !important;
+}
+
+.slick-list {
+  margin: 0 -10px;
+  padding: 10px 0;
+}
+
+.slick-slide {
+  padding: 5px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
+  background-color: #25D366 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 15px 30px !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+  color: white !important;
+}

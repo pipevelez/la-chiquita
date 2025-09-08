@@ -1,0 +1,73 @@
+/* base.css - Estilos base y globales */
+@font-face {
+  font-family: 'Moonglow Std Extended';
+  src: url('/font/moonglow-extended.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #faf7e7;
+  color: #321808;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #321808 !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #faf7e7 !important;
+}
+
+.navbar-brand-title {
+  font-family: 'Moonglow Std Extended', sans-serif;
+  color: #faf7e7;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.nav-link.active {
+  color: #e9b274 !important;
+}
+
+.nav-link:hover {
+  color: #e9b274 !important;
+}
+
+.navbar-toggler {
+  border-color: #faf7e7;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250, 247, 231, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #af6a18;
+  border-color: #af6a18;
+}
+
+.btn-primary:hover {
+  background-color: #e9b274;
+  border-color: #e9b274;
+  color: #321808;
+}
+
+/* Utilidades de scroll */
+.category-title {
+  scroll-margin-top: 80px;
+}
+
+.category-scroll {
+  scroll-margin-top: 100px;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}

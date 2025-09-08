@@ -55,58 +55,64 @@ export default function Visitanos() {
           <div className="info-card">
             <h3 className="info-card-title">Información de Contacto</h3>
             
-            <div className="contact-item">
-              <div>
-                <strong>📍 Dirección:</strong>
-                <p>Cra 10 #10-02, Belalcázar, Caldas</p>
+            <div className="contact-info-grid">
+              <div className="contact-info-item">
+                <div className="contact-icon">📍</div>
+                <div className="contact-details">
+                  <strong>Dirección:</strong>
+                  <p>Cra 10 #10-02, Belalcázar, Caldas</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="contact-item">
-              <div>
-                <strong>📞 Teléfono:</strong>
-                <p>+57 320 3818 931</p>
+              
+              <div className="contact-info-item">
+                <div className="contact-icon">📞</div>
+                <div className="contact-details">
+                  <strong>Teléfono:</strong>
+                  <p>+57 320 3818 931</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="contact-item">
-              <div>
-                <strong>📧 Email:</strong>
-                <p>lachiquitapanaderia1@gmail.com</p>
+              
+              <div className="contact-info-item">
+                <div className="contact-icon">📧</div>
+                <div className="contact-details">
+                  <strong>Email:</strong>
+                  <p>lachiquitapanaderia1@gmail.com</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="contact-item">
-              <div>
-                <strong>🕒 Horarios:</strong>
-                <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
-                <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
+              
+              <div className="contact-info-item">
+                <div className="contact-icon">🕒</div>
+                <div className="contact-details">
+                  <strong>Horarios:</strong>
+                  <div>
+                    <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
+                    <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Servicios Adicionales */}
+      {/* Servicios Adicionales - CENTRADO */}
       <div className="row services-section">
         <div className="col-12">
           <h2 className="section-title text-center">Nuestros Servicios</h2>
         </div>
         
-        <div className="col-md-6 service-card">
-          <div className="service-icon">🎂</div>
-          <h3>Pedidos Especiales</h3>
-          <p>✨ Realizamos todo tipo de tortas para tus eventos especiales: envinadas, genovesas, tortas frías y tres leches.
-📅 Haz tu pedido con al menos 48 horas de anticipación y disfruta de un postre único y delicioso.</p>
+        <div className="col-12 col-md-8 mx-auto"> {/* Contenedor centrado */}
+          <div className="row justify-content-center"> {/* Fila centrada */}
+            <div className="col-12 col-md-10 service-card"> {/* Tarjeta más ancha */}
+              <div className="service-content text-center">
+                <div className="service-icon">🎂</div>
+                <h3>Pedidos Especiales</h3>
+                <p>✨ Realizamos todo tipo de tortas para tus eventos especiales: envinadas, genovesas, tortas frías y tres leches.</p>
+                <p>📅 Haz tu pedido con al menos 48 horas de anticipación y disfruta de un postre único y delicioso.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-    { /* Servicio de domicilios deshabilitado temporalmente
-        <div className="col-md-6 service-card">
-          <div className="service-icon">🚚</div>
-          <h3>Domicilios</h3>
-          <p>Servicio de domicilio disponible en Belalcázar y zonas aledañas. Llámanos para coordinar tu pedido.</p>
-        </div> */}
-        
       </div>
 
       {/* Sección de Contacto Simplificada */}
@@ -126,7 +132,7 @@ export default function Visitanos() {
       {/* Cómo Llegar */}
       <div className="row directions-section">
         <div className="col-12">
-          <h2 className="section-title">Cómo llegar</h2>
+          <h2 className="section-title text-center">Cómo llegar</h2>
         </div>
         
         <div className="col-md-6">
