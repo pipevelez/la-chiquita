@@ -157,7 +157,7 @@ export default function Home() {
             de nuestros productos recién horneados en un ambiente familiar y acogedor.
           </p>
           <p className="location-address">
-            <strong>Dirección:</strong> Cl. 15, Belalcazar, Caldas
+            <strong>Dirección:</strong> Cra 3 #10-02, Belalcazar, Caldas
           </p>
           <div className="location-info">
             <p><strong>Horario de atención:</strong></p>
