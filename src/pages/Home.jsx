@@ -98,37 +98,53 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Sección "Conócenos" - CORREGIDA */}
-      <div className="row align-items-center about-section animate-fade-in-up">
-        <div className="col-md-6">
-          <h2 className="about-title">NUESTRA HISTORIA</h2>
-          <p className="about-text">
-            Desde 1978, en <strong>La Chiquita</strong> hemos mantenido viva la tradición 
-            de la panadería artesanal. Cada mañana amasamos con dedicación, 
-            usando ingredientes frescos y recetas transmitidas por generaciones.
-          </p>
-          <p className="about-text">
-            Nuestro compromiso es brindarte el auténtico sabor casero, 
-            ese que te transporta a los mejores momentos en familia.
-          </p>
-          <div className="about-button-container"> {/* Contenedor adicional agregado */}
-            <Link 
-              to="/nosotros" 
-              className="btn about-btn"
-            >
-              Descubre nuestra historia
-            </Link>
+      {/* Sección "Conócenos" - REORGANIZADA */}
+      <div className="about-section animate-fade-in-up">
+        <div className="row">
+          <div className="col-12 text-center mb-4">
+            <h2 className="about-title">NUESTRA HISTORIA</h2>
           </div>
         </div>
-        <div className="col-md-6 text-center">
-          <img 
-            src="/apariencia/fondo_home.JPG"
-            alt="Panadera La Chiquita"
-            className="about-image"
-            onError={(e) => {
-              e.target.src = "/placeholder-panaderia.jpg";
-            }}
-          />
+        
+        <div className="row align-items-center">
+          <div className="col-md-6 order-md-1 order-2">
+            <div className="about-text-content">
+              <p className="about-text">
+                Desde 1978, en <strong>La Chiquita</strong> hemos mantenido viva la tradición 
+                de la panadería artesanal. Cada mañana amasamos con dedicación, 
+                usando ingredientes frescos y recetas transmitidas por generaciones.
+              </p>
+              <p className="about-text">
+                Nuestro compromiso es brindarte el auténtico sabor casero, 
+                ese que te transporta a los mejores momentos en familia.
+              </p>
+            </div>
+          </div>
+          
+          <div className="col-md-6 text-center order-md-2 order-1">
+            <img 
+              src="/apariencia/fondo_home.JPG"
+              alt="Panadera La Chiquita"
+              className="about-image"
+              onError={(e) => {
+                e.target.src = "/placeholder-panaderia.jpg";
+              }}
+            />
+          </div>
+        </div>
+        
+        {/* Botón debajo de la imagen en móviles */}
+        <div className="row">
+          <div className="col-12 text-center order-3">
+            <div className="about-button-container">
+              <Link 
+                to="/nosotros" 
+                className="btn about-btn"
+              >
+                Descubre nuestra historia
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -141,7 +157,7 @@ export default function Home() {
             de nuestros productos recién horneados en un ambiente familiar y acogedor.
           </p>
           <p className="location-address">
-            <strong>Dirección:</strong> Cra 3 #10-02, Belalcazar, Caldas
+            <strong>Dirección:</strong> Cl. 15, Belalcazar, Caldas
           </p>
           <div className="location-info">
             <p><strong>Horario de atención:</strong></p>
