@@ -160,3 +160,141 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
   color: white !important;
 }
+
+/* Mejoras específicas para la sección de contacto en móviles */
+@media (max-width: 576px) {
+  .contact-info-item {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 15px 10px !important;
+  }
+  
+  .contact-icon {
+    margin: 0 auto !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .contact-details {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  .contact-details strong {
+    text-align: center !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+  }
+  
+  .contact-details p {
+    text-align: center !important;
+    margin: 0 auto !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Asegurar que los horarios se vean bien */
+  .contact-info-item:last-child .contact-details div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .contact-info-item:last-child .contact-details p {
+    margin-bottom: 5px !important;
+  }
+}
+
+/* Estilos adicionales para mejorar la visualización */
+.contact-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(250, 247, 231, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border-left: 3px solid #e9b274;
+}
+
+.contact-info-item:hover {
+  background: rgba(233, 178, 116, 0.2);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+  margin-top: 2px;
+  color: #af6a18;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details strong {
+  color: #321808;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.contact-details p {
+  color: #654321;
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* Efectos de hover mejorados */
+.contact-info-item {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact-info-item:hover {
+  box-shadow: 0 5px 15px rgba(50, 24, 8, 0.1);
+  border-left: 3px solid #af6a18;
+}
+
+/* Mejor separación entre elementos */
+.contact-info-grid {
+  gap: 20px;
+}
+
+/* Ajustes específicos para el bloque de horarios */
+.contact-info-item:last-child .contact-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Para tablets */
+@media (max-width: 768px) {
+  .contact-info-item {
+    padding: 12px;
+  }
+  
+  .contact-icon {
+    font-size: 1.4rem;
+  }
+  
+  .contact-details strong {
+    font-size: 1rem;
+  }
+  
+  .contact-details p {
+    font-size: 0.95rem;
+  }
+}

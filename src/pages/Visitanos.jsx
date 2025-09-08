@@ -41,7 +41,7 @@ export default function Visitanos() {
           </div>
           <div className="text-center mt-3">
             <a
-              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI1MDkwMy.4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-lg"
@@ -84,7 +84,7 @@ export default function Visitanos() {
                 <div className="contact-icon">🕒</div>
                 <div className="contact-details">
                   <strong>Horarios:</strong>
-                  <div>
+                  <div className="horarios-container">
                     <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
                     <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
                   </div>
@@ -101,9 +101,9 @@ export default function Visitanos() {
           <h2 className="section-title text-center">Nuestros Servicios</h2>
         </div>
         
-        <div className="col-12 col-md-8 mx-auto"> {/* Contenedor centrado */}
-          <div className="row justify-content-center"> {/* Fila centrada */}
-            <div className="col-12 col-md-10 service-card"> {/* Tarjeta más ancha */}
+        <div className="col-12 col-md-8 mx-auto">
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-10 service-card">
               <div className="service-content text-center">
                 <div className="service-icon">🎂</div>
                 <h3>Pedidos Especiales</h3>
