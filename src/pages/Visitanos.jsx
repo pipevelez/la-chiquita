@@ -56,33 +56,29 @@ export default function Visitanos() {
             <h3 className="info-card-title">Información de Contacto</h3>
             
             <div className="contact-item">
-              <div className="contact-icon">📍</div>
               <div>
-                <strong>Dirección:</strong>
-                <p>Calle 15 #10-25, Belalcázar, Caldas</p>
+                <strong>📍 Dirección:</strong>
+                <p>Cra 10 #10-02, Belalcázar, Caldas</p>
               </div>
             </div>
             
             <div className="contact-item">
-              <div className="contact-icon">📞</div>
               <div>
-                <strong>Teléfono:</strong>
-                <p>+57 (606) 123 4567</p>
+                <strong>📞 Teléfono:</strong>
+                <p>+57 320 3818 931</p>
               </div>
             </div>
             
             <div className="contact-item">
-              <div className="contact-icon">📧</div>
               <div>
-                <strong>Email:</strong>
-                <p>contacto@panaderialachiquita.com</p>
+                <strong>📧 Email:</strong>
+                <p>lachiquitapanaderia1@gmail.com</p>
               </div>
             </div>
             
             <div className="contact-item">
-              <div className="contact-icon">🕒</div>
               <div>
-                <strong>Horarios:</strong>
+                <strong>🕒 Horarios:</strong>
                 <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
                 <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
               </div>
@@ -100,14 +96,17 @@ export default function Visitanos() {
         <div className="col-md-6 service-card">
           <div className="service-icon">🎂</div>
           <h3>Pedidos Especiales</h3>
-          <p>Realizamos tortas personalizadas para cumpleaños, bodas y eventos especiales con 48 horas de anticipación.</p>
+          <p>✨ Realizamos todo tipo de tortas para tus eventos especiales: envinadas, genovesas, tortas frías y tres leches.
+📅 Haz tu pedido con al menos 48 horas de anticipación y disfruta de un postre único y delicioso.</p>
         </div>
-        
+
+    { /* Servicio de domicilios deshabilitado temporalmente
         <div className="col-md-6 service-card">
           <div className="service-icon">🚚</div>
           <h3>Domicilios</h3>
           <p>Servicio de domicilio disponible en Belalcázar y zonas aledañas. Llámanos para coordinar tu pedido.</p>
-        </div>
+        </div> */}
+        
       </div>
 
       {/* Sección de Contacto Simplificada */}
