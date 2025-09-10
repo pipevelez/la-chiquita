@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const recommendedProducts = [
   {
@@ -35,6 +35,45 @@ const recommendedProducts = [
 
 export default function Home() {
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const videoRef = useRef(null);
+  const [videoDimensions, setVideoDimensions] = useState({ width: "100%", height: "auto" });
+
+  // Optimización del video - mantener relación de aspecto
+  useEffect(() => {
+    const handleVideoLoad = () => {
+      if (videoRef.current) {
+        // Mantener la relación de aspecto natural del video
+        const video = videoRef.current;
+        const naturalWidth = video.videoWidth;
+        const naturalHeight = video.videoHeight;
+        
+        if (naturalWidth > 0 && naturalHeight > 0) {
+          const aspectRatio = naturalHeight / naturalWidth;
+          const containerWidth = video.parentElement.offsetWidth;
+          const calculatedHeight = containerWidth * aspectRatio;
+          
+          setVideoDimensions({
+            width: "100%",
+            height: `${calculatedHeight}px`
+          });
+        }
+      }
+    };
+
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.addEventListener('loadedmetadata', handleVideoLoad);
+      videoElement.addEventListener('resize', handleVideoLoad);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('loadedmetadata', handleVideoLoad);
+        videoElement.removeEventListener('resize', handleVideoLoad);
+      }
+    };
+  }, []);
 
   return (
     <main className="container mt-4">
@@ -48,15 +87,36 @@ export default function Home() {
             Disfruta lo mejor del pan artesanal, hecho con amor.
           </p>
 
-          {/* 📺 Video */}
-          <video
-            className="welcome-video"
-            src="/videos/home.mp4"
-            controls
-            muted
-            autoPlay
-            loop
-          />
+          {/* 📺 Video optimizado */}
+          <div 
+            className="welcome-video-container" 
+            style={{ 
+              maxWidth: "300px",       // ← Contenedor más angosto
+              width: "100%",
+              aspectRatio: "9/16",     // ← RELACIÓN VERTICAL 9:16 (alto > ancho)
+              margin: "0 auto",
+              borderRadius: "12px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              backgroundColor: "#000"
+            }}
+          >
+            <video
+              className="welcome-video"
+              src="/videos/home.mp4"
+              controls
+              muted
+              autoPlay
+              loop
+              preload="metadata"
+              style={{ 
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",    // ← El video cubre el espacio vertical
+                display: "block"
+              }}
+            />
+          </div>
         </div>
       </div>
 
@@ -98,7 +158,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Sección "Conócenos" - REORGANIZADA */}
+      {/* Sección "Conócenos" - IMAGEN CORREGIDA */}
       <div className="about-section animate-fade-in-up">
         <div className="row">
           <div className="col-12 text-center mb-4">
@@ -122,14 +182,55 @@ export default function Home() {
           </div>
           
           <div className="col-md-6 text-center order-md-2 order-1">
-            <img 
-              src="/apariencia/fondo_home.JPG"
-              alt="Panadera La Chiquita"
-              className="about-image"
-              onError={(e) => {
-                e.target.src = "/placeholder-panaderia.jpg";
-              }}
-            />
+            <div style={{ 
+              position: "relative", 
+              width: "100%", 
+              maxWidth: "500px",
+              margin: "0 auto",
+              overflow: "hidden",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
+            }}>
+              {!imageLoaded && (
+                <div 
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)",
+                    backgroundSize: "200% 100%",
+                    animation: "loading 1.5s infinite",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "12px",
+                    minHeight: "300px"
+                  }}
+                >
+                  <span style={{ color: "#888", fontSize: "14px" }}>Cargando...</span>
+                </div>
+              )}
+              <img 
+                src="/apariencia/fondo_home.JPG"
+                alt="Panadera La Chiquita"
+                className="about-image"
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)}
+                onError={(e) => {
+                  e.target.src = "/placeholder-panaderia.jpg";
+                }}
+                style={{
+                  width: "100%",
+                  height: "auto", // Cambiado a auto para mantener proporciones
+                  display: "block",
+                  borderRadius: "12px",
+                  opacity: imageLoaded ? 1 : 0,
+                  transition: "opacity 0.3s ease-in-out"
+                }}
+              />
+            </div>
           </div>
         </div>
         
@@ -166,12 +267,12 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-6 text-center">
-          <div className="map-container">
+          <div className="map-container" style={{ height: "300px", overflow: "hidden", borderRadius: "12px" }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295.41983789832904!2d-75.81253278392496!3d4.992767080948355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e47852c68f4ff7b%3A0x14670897885c7eee!2sPanaderia%20La%20Chiquita!5e0!3m2!1ses-419!2sco!4v1757275659145!5m2!1ses-419!2sco"
               width="100%"
-              height="300"
-              style={{ border: 0, borderRadius: '12px' }}
+              height="100%"
+              style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
