@@ -262,8 +262,7 @@ export default function Home() {
           </p>
           <div className="location-info">
             <p><strong>Horario de atención:</strong></p>
-            <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
-            <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
+            <p>Lunes a Domingo y Festivos : 6:15 AM - 9:00 PM</p>
           </div>
         </div>
         <div className="col-md-6 text-center">
