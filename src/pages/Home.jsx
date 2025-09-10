@@ -51,7 +51,7 @@ export default function Home() {
           {/* 📺 Video */}
           <video
             className="welcome-video"
-            src="/apariencia/video_home.mp4"
+            src="/videos/home.mp4"
             controls
             muted
             autoPlay

@@ -60,7 +60,7 @@ export default function Visitanos() {
                 <div className="contact-icon">📍</div>
                 <div className="contact-details">
                   <strong>Dirección:</strong>
-                  <p>Cra 10 #10-02, Belalcázar, Caldas</p>
+                  <p>Cra 3 #10-02, Belalcázar, Caldas</p>
                 </div>
               </div>
               
@@ -85,8 +85,7 @@ export default function Visitanos() {
                 <div className="contact-details">
                   <strong>Horarios:</strong>
                   <div className="horarios-container">
-                    <p>Lunes a Sábado: 6:00 AM - 8:00 PM</p>
-                    <p>Domingos y Festivos: 7:00 AM - 7:00 PM</p>
+                    <p>Lunes a Domingo y Festivos: 6:15 AM - 9:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -125,27 +124,6 @@ export default function Visitanos() {
             <Link to="/contacto" className="btn btn-primary btn-lg contact-btn">
               Contáctanos
             </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Cómo Llegar */}
-      <div className="row directions-section">
-        <div className="col-12">
-          <h2 className="section-title text-center">Cómo llegar</h2>
-        </div>
-        
-        <div className="col-md-6">
-          <div className="direction-card">
-            <h4>🚗 En carro</h4>
-            <p>Estamos ubicados en el centro de Belalcázar, a una cuadra del parque principal. Hay parqueadero público disponible a 50 metros.</p>
-          </div>
-        </div>
-        
-        <div className="col-md-6">
-          <div className="direction-card">
-            <h4>🚌 Transporte público</h4>
-            <p>Puedes tomar cualquier bus que pase por el centro de Belalcázar. Nuestra panadería está a solo 2 cuadras de la terminal de buses.</p>
           </div>
         </div>
       </div>
