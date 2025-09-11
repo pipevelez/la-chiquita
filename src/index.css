@@ -239,3 +239,48 @@ img[loading="lazy"] {
   color: #654321;
   margin-bottom: 1.5rem;
 }
+
+/* Efecto de respiración para el badge */
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  }
+}
+
+/* Responsive para la sección destacada */
+@media (max-width: 768px) {
+  .featured-product-section {
+    padding: 2rem 1rem !important;
+    margin: 2rem 0 !important;
+  }
+  
+  .featured-badge {
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+  }
+  
+  .featured-product-name {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-badge {
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
+  }
+  
+  .featured-product-btn {
+    padding: 10px 25px !important;
+    font-size: 1rem !important;
+  }
+}

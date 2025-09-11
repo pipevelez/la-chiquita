@@ -33,6 +33,15 @@ const recommendedProducts = [
   },
 ];
 
+// Producto estrella del mes
+const featuredProduct = {
+  name: "Torta de Ahuyama",
+  description: "Nuestra torta de ahuyama es un producto típico que combina lo mejor de la tradición y el sabor casero. Su textura suave y esponjosa, junto al dulzor natural de la ahuyama, la convierten en un postre único y saludable. Perfecta para acompañar con un café o compartir en familia, esta delicia es orgullo de Belalcázar y un símbolo de nuestra gastronomía artesanal.",
+  image: "/postres/torta_ahuyama.jpg",
+  category: "PANADERÍA",
+  rating: 5
+};
+
 export default function Home() {
   const [hoveredProduct, setHoveredProduct] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -75,6 +84,23 @@ export default function Home() {
     };
   }, []);
 
+  // Componente de estrellas de rating
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <span
+        key={index}
+        style={{
+          color: index < rating ? "#ffc107" : "#e4e5e9",
+          fontSize: "1.5rem",
+          margin: "0 2px",
+          textShadow: "0 2px 4px rgba(0,0,0,0.2)"
+        }}
+      >
+        ★
+      </span>
+    ));
+  };
+
   return (
     <main className="container mt-4">
       {/* Sección de Bienvenida con fondo de Cristo Rey */}
@@ -116,6 +142,97 @@ export default function Home() {
                 display: "block"
               }}
             />
+          </div>
+        </div>
+      </div>
+
+      {/* 🏆 SECCIÓN "EL MÁS COMPRADO DEL MES" */}
+      <div style={{
+        background: "linear-gradient(135deg, #fffaf0 0%, #fff5e6 100%)",
+        borderRadius: "20px",
+        margin: "3rem 0",
+        padding: "2.5rem 2rem",
+        border: "2px solid #ffeeba",
+        textAlign: "center"
+      }}>
+        {/* Badge con efecto de respiración */}
+        <div style={{
+          backgroundColor: "#ffd700",
+          color: "#321808",
+          padding: "12px 30px",
+          borderRadius: "25px",
+          fontWeight: "bold",
+          fontSize: "1.2rem",
+          marginBottom: "2rem",
+          display: "inline-block",
+          boxShadow: "0 4px 15px rgba(255, 215, 0, 0.4)",
+          animation: "breathing 3s infinite ease-in-out",
+          border: "2px solid #ffc107"
+        }}>
+          ⭐ EL MÁS COMPRADO DEL MES ⭐
+        </div>
+
+        <div className="row justify-content-center align-items-center">
+          {/* Imagen del producto */}
+          <div className="col-md-4 text-center mb-4 mb-md-0">
+            <div style={{
+              width: "100%",
+              maxWidth: "250px",
+              height: "250px",
+              margin: "0 auto",
+              overflow: "hidden",
+              borderRadius: "15px",
+              boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+              border: "3px solid #ffd700"
+            }}>
+              <img
+                src={featuredProduct.image}
+                alt={featuredProduct.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+                onError={(e) => {
+                  e.target.src = "/placeholder-product.png";
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Información del producto */}
+          <div className="col-md-8 text-center text-md-start">
+            <h2 style={{
+              color: "#321808",
+              fontSize: "2rem",
+              fontWeight: "bold",
+              marginBottom: "1rem"
+            }}>
+              {featuredProduct.name}
+            </h2>
+            
+            <p style={{
+              color: "#654321",
+              fontSize: "1.1rem",
+              lineHeight: "1.6",
+              marginBottom: "1.5rem"
+            }}>
+              {featuredProduct.description}
+            </p>
+
+            {/* Rating */}
+            <div style={{ marginBottom: "1.5rem" }}>
+              <div style={{ marginBottom: "0.5rem" }}>
+                {renderStars(featuredProduct.rating)}
+              </div>
+              <span style={{
+                color: "#666",
+                fontSize: "0.9rem"
+              }}>
+              </span>
+            </div>
+
+            
           </div>
         </div>
       </div>
@@ -185,7 +302,7 @@ export default function Home() {
             <div style={{ 
               position: "relative", 
               width: "100%", 
-              maxWidth: "500px",
+              maxWidth: "400px",
               margin: "0 auto",
               overflow: "hidden",
               borderRadius: "12px",
