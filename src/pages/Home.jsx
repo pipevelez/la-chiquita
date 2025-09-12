@@ -180,8 +180,8 @@ export default function Home() {
           <div className="col-md-4 text-center mb-4 mb-md-0">
             <div style={{
               width: "100%",
-              maxWidth: "250px",
-              height: "250px",
+              maxWidth: "300px",
+              height: "300px",
               margin: "0 auto",
               overflow: "hidden",
               borderRadius: "15px",
