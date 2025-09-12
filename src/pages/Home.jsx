@@ -165,11 +165,14 @@ export default function Home() {
           fontSize: "1.2rem",
           marginBottom: "2rem",
           display: "inline-block",
-          boxShadow: "0 4px 15px rgba(255, 215, 0, 0.4)",
-          animation: "breathing 3s infinite ease-in-out",
-          border: "2px solid #ffc107"
+          boxShadow: "0 0 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.3), 0 0 15px rgba(255, 215, 0, 0.2), 0 0 20px rgba(255, 215, 0, 0.1)",
+          border: "2px solid #ffc107",
+          animation: `
+            shake 2s infinite,
+            borderGlow 3s infinite ease-in-out
+          `
         }}>
-          ⭐ EL MÁS COMPRADO DEL MES ⭐
+          ⭐ PRODUCTO MÁS VENDIDO DEL MES ⭐
         </div>
 
         <div className="row justify-content-center align-items-center">
@@ -397,7 +400,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-3">
             <a
-              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI1MDkwMy.4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Panaderia+La+Chiquita/@4.9927671,-75.8125328,20.75z/data=!4m14!1m7!3m6!1s0x8e47852c68f4ff7b:0x14670897885c7eee!2sPanaderia+La+Chiquita!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2!3m5!1s0x8e47852c68f4ff7b:0x14670897885c7eee!8m2!3d4.9927209!4d-75.8124735!16s%2Fg%2F11hzwrqm_2?entry=ttu&g_ep=EgoyMDI5MDkwMy.4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -407,6 +410,34 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Estilos CSS en línea para las animaciones */}
+      <style>
+        {`
+          @keyframes shake {
+            0%, 100% { transform: translateX(0) rotate(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px) rotate(-1deg); }
+            20%, 40%, 60%, 80% { transform: translateX(2px) rotate(1deg); }
+          }
+          
+          @keyframes borderGlow {
+            0%, 100% { 
+              box-shadow: 0 0 5px rgba(255, 215, 0, 0.4),
+                          0 0 10px rgba(255, 215, 0, 0.3),
+                          0 0 15px rgba(255, 215, 0, 0.2),
+                          0 0 20px rgba(255, 215, 0, 0.1);
+              border-color: #ffc107;
+            }
+            50% { 
+              box-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+                          0 0 20px rgba(255, 215, 0, 0.6),
+                          0 0 30px rgba(255, 215, 0, 0.4),
+                          0 0 40px rgba(255, 215, 0, 0.2);
+              border-color: #ffeb3b;
+            }
+          }
+        `}
+      </style>
     </main>
   );
 }
