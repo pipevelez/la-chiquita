@@ -2,10 +2,26 @@ import React from 'react';
 
 function NuestraCocina() {
   const videos = [
-    { id: "VIDEO_ID_1", title: "Preparación de Empanadas" },
-    { id: "VIDEO_ID_2", title: "Elaboración de Pan Casero" },
-    { id: "VIDEO_ID_3", title: "Nuestro Proceso de Horneado" },
-    { id: "VIDEO_ID_4", title: "Receta Secreta de Salsas" }
+    { 
+      id: "X1iPAOjCjYU", 
+      title: "Nuestros postres",
+      url: "https://youtube.com/shorts/X1iPAOjCjYU?si=9bSMqoAGCRxPd1_c"
+    },
+    { 
+      id: "gYGgdmT5d6Y", 
+      title: "Buñuelos rellenos de queso",
+      url: "https://youtube.com/shorts/gYGgdmT5d6Y?si=IV9yVwAKw0BT2bex"
+    },
+    { 
+      id: "AuENuCgR7zI", 
+      title: "Torta de queso",
+      url: "https://youtube.com/shorts/AuENuCgR7zI?si=FRX_H1i37RD4UHQm"
+    },
+    { 
+      id: "BSHEU1yBhB8", 
+      title: "Chicharrón de Guayaba",
+      url: "https://youtube.com/shorts/BSHEU1yBhB8?si=tVA630onbs5GfmTh"
+    }
   ];
 
   return (
@@ -18,18 +34,29 @@ function NuestraCocina() {
       
       <div className="row g-4">
         {videos.map((video, index) => (
-          <div key={index} className="col-md-6">
-            <div className="card h-100 border-0 shadow">
+          <div key={index} className="col-md-6 col-lg-4">
+            <div className="card h-100 border-0 shadow-sm">
               <div className="ratio ratio-16x9">
                 <iframe 
                   src={`https://www.youtube.com/embed/${video.id}`}
                   title={`Video de La Chiquita: ${video.title}`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  style={{ borderRadius: "8px 8px 0 0" }}
                 ></iframe>
               </div>
               <div className="card-body">
-                <h5 className="card-title">{video.title}</h5>
+                <h5 className="card-title text-center">{video.title}</h5>
+                <div className="text-center mt-3">
+                  <a 
+                    href={video.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-primary btn-sm"
+                  >
+                    Ver en YouTube
+                  </a>
+                </div>
               </div>
             </div>
           </div>
