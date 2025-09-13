@@ -370,9 +370,6 @@ export default function Home() {
       </div>
 
       {/* Sección de Ubicación con Google Maps */}
-      // En el archivo Home.jsx, reemplaza la sección de ubicación con este código:
-
-      {/* Sección de Ubicación con Google Maps */}
       <div className="row align-items-center location-section animate-fade-in-up">
         <div className="col-md-6">
           <h2 className="location-title">VISÍTANOS</h2>

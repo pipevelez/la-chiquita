@@ -3,16 +3,6 @@ import React from 'react';
 function NuestraCocina() {
   const videos = [
     { 
-      id: "X1iPAOjCjYU", 
-      title: "Nuestros postres",
-      url: "https://youtube.com/shorts/X1iPAOjCjYU?si=9bSMqoAGCRxPd1_c"
-    },
-    { 
-      id: "Hu2SZcfSusM", 
-      title: "Torta de tres leches",
-      url: "https://youtube.com/shorts/Hu2SZcfSusM?si=NGIyu_mc7rUMREzG"
-    },
-    { 
       id: "gYGgdmT5d6Y", 
       title: "Buñuelos rellenos de queso",
       url: "https://youtube.com/shorts/gYGgdmT5d6Y?si=IV9yVwAKw0BT2bex"
@@ -23,9 +13,34 @@ function NuestraCocina() {
       url: "https://youtube.com/shorts/AuENuCgR7zI?si=FRX_H1i37RD4UHQm"
     },
     { 
-      id: "BSHEU1yBhB8", 
-      title: "Chicharrón de Guayaba",
-      url: "https://youtube.com/shorts/BSHEU1yBhB8?si=tVA630onbs5GfmTh"
+      id: "SB5IoVzlKEM", 
+      title: "Pan canasta",
+      url: "https://youtube.com/shorts/SB5IoVzlKEM"
+    },
+    { 
+      id: "67-cx4faxdU", 
+      title: "Tortas frías",
+      url: "https://youtube.com/shorts/67-cx4faxdU"
+    },
+    { 
+      id: "GNgCme2dSAE", 
+      title: "Tortas de tres leches",
+      url: "https://youtube.com/shorts/GNgCme2dSAE"
+    },
+    { 
+      id: "sihzeBPvxQ8", 
+      title: "Hojaldres",
+      url: "https://youtube.com/shorts/sihzeBPvxQ8"
+    },
+    { 
+      id: "Y2bW-fkC4bc", 
+      title: "Tortas y postres",
+      url: "https://youtube.com/shorts/Y2bW-fkC4bc"
+    },
+    { 
+      id: "Csg7Vb-lpfA", 
+      title: "Dulcería",
+      url: "https://youtube.com/shorts/Csg7Vb-lpfA"
     }
   ];
 
