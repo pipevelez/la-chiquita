@@ -23,9 +23,9 @@ function NuestraCocina() {
       url: "https://youtube.com/shorts/67-cx4faxdU"
     },
     { 
-      id: "Y2bW-fkC4bc", 
+      id: "q9hD-3ylNGU", 
       title: "Tortas de tres leches",
-      url: "https://youtube.com/shorts/Y2bW-fkC4bc"
+      url: "https://www.youtube.com/watch?v=q9hD-3ylNGU"
     },
     { 
       id: "sihzeBPvxQ8", 
