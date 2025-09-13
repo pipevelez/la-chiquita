@@ -11,11 +11,11 @@ const recommendedProducts = [
     categorySlug: "dulces"
   },
   {
-    name: "Torta de Maracuyá",
-    description: "Suave, esponjosa y con el toque perfecto de maracuyá natural. Una explosión de sabor tropical en cada bocado.",
-    image: "/dulces/Torta_mar.png",
-    category: "DULCES",
-    categorySlug: "dulces"
+    name: "Porcion de Torta de Queso",
+    description: "Suave, cremosa y con ese toque casero que conquista paladares. Un postre tradicional que combina la sencillez del queso con el sabor auténtico de nuestra panadería. ¡No te quedes sin probarla!",
+    image: "/postres/torta_queso.JPG",
+    category: "POSTRES",
+    categorySlug: "postres"
   },
   {
     name: "Pizza",

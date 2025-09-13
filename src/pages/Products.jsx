@@ -10,11 +10,6 @@ const localProducts = {
       description: "Crujiente por fuera, suave y esponjoso por dentro, con ese aroma irresistible que solo tiene el pan recién horneado. Tradición, calidad y sabor único en cada mordisco, hecho con amor desde 1978 en Panadería La Chiquita.",
       image: "/panaderia/pan.PNG",
     },
-    {
-      name: "Danesa de frutas",
-      description: "Crujientes y suaves, rellenas de exquisitas frutas confitadas. El toque perfecto de dulzura para acompañar tu café.",
-      image: "/panaderia/Danesas.png",
-    },
   ],
   Bebidas: [
     {
@@ -34,11 +29,6 @@ const localProducts = {
       description: "Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce.",
       image: "/dulces/Milhojas.png",
     },
-    {
-      name: "Torta de Maracuyá",
-      description: "Suave, esponjosa y con el toque perfecto de maracuyá natural. Una explosión de sabor tropical en cada bocado.",
-      image: "/dulces/Torta_mar.png",
-    }
   ],
   Especialidades: [
     {
