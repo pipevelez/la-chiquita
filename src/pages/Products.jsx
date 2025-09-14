@@ -29,6 +29,11 @@ const localProducts = {
       description: "Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce.",
       image: "/dulces/Milhojas.png",
     },
+    {
+      name: "Chiqui Galletas",
+      description: "Divertidas, coloridas y llenas de sabor. Nuestras Chiqui Galletas son el antojo perfecto para grandes y chicos. ¡Endulza tu día con La Chiquita!",
+      image: "/dulces/chiqui_galletas.PNG",
+    }
   ],
   Especialidades: [
     {
@@ -54,6 +59,16 @@ const localProducts = {
       image: "/postres/leche_asada.JPG",
     },
     {
+      name: "Brownie",
+      description: "Brownies irresistibles con ese sabor intenso a chocolate, textura esponjosa y el toque casero que tanto te gusta 😍. Un pedacito de felicidad en cada bocado, ¡ven por el tuyo a La Chiquita!",
+      image: "/postres/brownie.PNG",
+    },
+    {
+      name: "Torta de Ahuyama",
+      description: "Nuestra torta de ahuyama es un producto típico que combina lo mejor de la tradición y el sabor casero. Su textura suave y esponjosa, junto al dulzor natural de la ahuyama, la convierten en un postre único y saludable. Perfecta para acompañar con un café o compartir en familia, esta delicia es orgullo de Belalcázar y un símbolo de nuestra gastronomía artesanal.",
+      image: "/postres/torta_ahuyama.jpg",
+    },
+    {
       name: "Postre de Tres Leches",
       description: "La suavidad del bizcocho bañado en tres leches, combinado con el toque dulce del chocolate y la frescura de la fresa, crean una experiencia irresistible. Un postre que derrite corazones en cada cucharada.",
       image: "/postres/tres_leches.JPG",
@@ -67,7 +82,12 @@ const localProducts = {
       name: "Porcion de Torta de Queso",
       description: "Suave, cremosa y con ese toque casero que conquista paladares. Un postre tradicional que combina la sencillez del queso con el sabor auténtico de nuestra panadería. ¡No te quedes sin probarla!",
       image: "/postres/torta_queso.JPG",
-    }
+    },
+    {
+      name: "Postre Milhoja",
+      description: "Nuestro postre de milhojas es el equilibrio perfecto entre textura y dulzura. ¡Un clásico que nunca pasa de moda en La Chiquita!",
+      image: "/postres/postre_milhoja.jpg",
+    },
   ],
   Tortas: [
     {
