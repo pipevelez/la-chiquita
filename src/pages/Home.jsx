@@ -33,12 +33,12 @@ const recommendedProducts = [
   },
 ];
 
-// Producto estrella del mes
+// Producto estrella de la semana - Ahora con video
 const featuredProduct = {
-  name: "Torta de Ahuyama",
-  description: "Nuestra torta de ahuyama es un producto típico que combina lo mejor de la tradición y el sabor casero. Su textura suave y esponjosa, junto al dulzor natural de la ahuyama, la convierten en un postre único y saludable. Perfecta para acompañar con un café o compartir en familia, esta delicia es orgullo de Belalcázar y un símbolo de nuestra gastronomía artesanal.",
-  image: "/postres/torta_ahuyama.jpg",
-  category: "PANADERÍA",
+  name: "Milhoja",
+  description: "Nuestra milhoja es un postre exquisito que combina la tradición y la calidad. Capas crujientes de hojaldre rellenas de suave arequipe y cubiertas con un delicioso glaseado. Un clásico irresistible para los amantes del dulce que se ha convertido en el favorito de nuestros clientes esta semana.",
+  video: "/videos/milhoja_postre.mp4",
+  category: "POSTRES",
   rating: 5
 };
 
@@ -47,6 +47,7 @@ export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const videoRef = useRef(null);
   const [videoDimensions, setVideoDimensions] = useState({ width: "100%", height: "auto" });
+  const [featuredVideoLoaded, setFeaturedVideoLoaded] = useState(false);
 
   // Optimización del video - mantener relación de aspecto
   useEffect(() => {
@@ -146,7 +147,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 🏆 SECCIÓN "EL MÁS COMPRADO DEL MES" */}
+      {/* 🏆 SECCIÓN "EL MÁS COMPRADO DE LA SEMANA" */}
       <div style={{
         background: "linear-gradient(135deg, #fffaf0 0%, #fff5e6 100%)",
         borderRadius: "20px",
@@ -172,11 +173,11 @@ export default function Home() {
             borderGlow 3s infinite ease-in-out
           `
         }}>
-          ⭐ PRODUCTO MÁS VENDIDO DEL MES ⭐
+          ⭐ PRODUCTO MÁS VENDIDO DE LA SEMANA ⭐
         </div>
 
         <div className="row justify-content-center align-items-center">
-          {/* Imagen del producto */}
+          {/* Video del producto en lugar de imagen */}
           <div className="col-md-4 text-center mb-4 mb-md-0">
             <div style={{
               width: "100%",
@@ -186,18 +187,49 @@ export default function Home() {
               overflow: "hidden",
               borderRadius: "15px",
               boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-              border: "3px solid #ffd700"
+              border: "3px solid #ffd700",
+              backgroundColor: "#000",
+              position: "relative"
             }}>
-              <img
-                src={featuredProduct.image}
-                alt={featuredProduct.name}
+              {!featuredVideoLoaded && (
+                <div 
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)",
+                    backgroundSize: "200% 100%",
+                    animation: "loading 1.5s infinite",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "15px"
+                  }}
+                >
+                  <span style={{ color: "#888", fontSize: "14px" }}>Cargando video...</span>
+                </div>
+              )}
+              <video
+                src={featuredProduct.video}
+                controls
+                muted
+                autoPlay
+                loop
+                preload="metadata"
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover"
+                  objectFit: "cover",
+                  display: "block",
+                  borderRadius: "15px",
+                  opacity: featuredVideoLoaded ? 1 : 0,
+                  transition: "opacity 0.3s ease-in-out"
                 }}
+                onLoadedData={() => setFeaturedVideoLoaded(true)}
                 onError={(e) => {
-                  e.target.src = "/placeholder-product.png";
+                  console.error("Error cargando el video:", e);
                 }}
               />
             </div>
